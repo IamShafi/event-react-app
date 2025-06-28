@@ -1,5 +1,6 @@
 import React from "react";
 import VenueImage from "../../public/image/venue-concert.svg";
+import MoobileVenueImage from "../../public/image/mobile-venue-concert.svg";
 import CorrectIcon from "../../public/logo/correct-icon.svg";
 
 const info = [
@@ -82,13 +83,25 @@ const Venue = () => {
       <section
         className="relative w-full"
         style={{
-          
           backgroundColor: "#000000B2",
         }}
       >
-        {/* Background image with opacity */}
+        {/* Mobile Background image with opacity */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 md:hidden"
+          style={{
+            backgroundImage: `url('${MoobileVenueImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.7,
+            height: "586px",
+          }}
+        />
+        
+        {/* Desktop Background image with opacity */}
+        <div
+          className="absolute inset-0 hidden md:block"
           style={{
             backgroundImage: `url('${VenueImage}')`,
             backgroundSize: "cover",
@@ -100,7 +113,7 @@ const Venue = () => {
         />
         
         {/* Content overlay */}
-        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between items-center md:gap-[245px] mx-5 my-12 md:my-[40px] md:pr-[145px]">
+        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between md:items-center md:gap-[245px] mx-5 my-12 md:my-[40px] md:pr-[145px]">
           <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
             <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
               ABOUT <span className="font-[700] font-aeonik">THE VENUE</span>
