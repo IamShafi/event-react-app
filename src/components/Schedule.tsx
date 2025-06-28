@@ -1,5 +1,5 @@
 import React from "react";
-import PeopleConcertImage from "../../public/image/people-concert.svg";
+import PeopleConcertImage from "../../public/image/people-concert.png";
 import DrumImage from "../../public/image/people-concert_drum.svg";
 import locationIcon from "../../public/logo/location.svg";
 const ScheduleCard = () => {
@@ -12,7 +12,7 @@ const ScheduleCard = () => {
   ];
   return (
     <div
-      className="w-full max-w-[480px] h-full px-[25px] py-[53px]"
+      className="w-full max-w-[480px] h-full p-[25px]"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
@@ -74,7 +74,7 @@ const VenueCard = () => {
 const Schedule = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto">
-      <section className="relativ w-full px-[80px] py-[120px]">
+      <section className="relative w-full">
         {/* Background Image */}
         <div
           className="absolute inset-0"
@@ -84,15 +84,23 @@ const Schedule = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             height: "685px",
-            background: "linear-gradient(to right, #000000 0%, #000000 60%) 1",
           }}
         ></div>
+        {/* Gradient Overlay */}
+        {/* <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%)",
+            height: "685px",
+            zIndex: 1,
+          }}
+        ></div> */}
         {/* Content */}
-        <div className="relative z-10 w-full flex flex-col md:gap-[50px] items-center justify-center">
-          <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mb-[25px]">
+        <div className="relative z-10 w-full flex flex-col md:gap-[50px] items-center justify-center ">
+          <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mt-[80px]">
             Event<span className="font-[700] font-aeonik">SCHEDULE</span>
           </h1>
-          <div className="w-full max-w-[1200px] flex items-center justify-between">
+          <div className="w-full max-w-[1200px] flex items-center justify-between ">
             <div className="flex flex-col gap-[20px]">
               <ScheduleCard />
               <VenueCard />
