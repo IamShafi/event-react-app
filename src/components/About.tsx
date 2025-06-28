@@ -1,5 +1,6 @@
 import React from "react";
 import AboutBG from "../../public/image/about-pulse-event.svg";
+import MobileAboutBG from "../../public/image/mobile-about-pulse-event.svg";
 import AboutImage from "../../public/image/people-concert_drum-mobile.svg";
 import MoreInfoCard from "./MoreInfoCard";
 const About = () => {
@@ -7,17 +8,26 @@ const About = () => {
     <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center md:mb-[100px]">
       {/* ABOUT Section with Background */}
       <section
-        className="relative w-full h-screen flex items-center mt-[180px] md:mt-[88px]"
+        className="relative w-full flex items-center mt-[88px] h-[834px] md:h-[544px]"
         style={{
-          backgroundImage: `url('${AboutBG}')`,
+          backgroundImage: `url('${MobileAboutBG}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "544px",
         }}
       >
-        <div className="w-full max-w-[577px] flex flex-col my-[50px] md:my-[80px] mx-[20px] md:ml-[120px]">
-          <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[20px] md:mb-[25px]">
+        {/* Desktop Background Image */}
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            backgroundImage: `url('${AboutBG}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="w-full max-w-[577px] flex flex-col my-[50px] md:my-[80px] mx-[20px] md:ml-[120px] relative z-10">
+          <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mt-[50px] md:mt-0 mb-[20px] md:mb-[25px]">
             ABOUT <span className="font-[700] font-aeonik">THE EVENT</span>
           </h1>
           {/* Line */}
