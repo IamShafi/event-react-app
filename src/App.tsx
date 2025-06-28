@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="main">
       <CoverSection />
-      <MediaCarousel />
+      {/* <MediaCarousel />
       <About />
       <Organiser />
       <Venue />
@@ -22,7 +22,7 @@ const App = () => {
       <Tickets />
       <FeaturedSponsor />
       <SponsorCarousel />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
