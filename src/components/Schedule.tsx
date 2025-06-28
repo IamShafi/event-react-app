@@ -1,5 +1,6 @@
 import React from "react";
 import PeopleConcertImage from "../../public/image/people-concert.png";
+import MobilePeopleConcertImage from "../../public/image/mobile-people-concert.svg";
 import DrumImage from "../../public/image/people-concert_drum.svg";
 import locationIcon from "../../public/logo/location.svg";
 const ScheduleCard = () => {
@@ -12,14 +13,14 @@ const ScheduleCard = () => {
   ];
   return (
     <div
-      className="w-full max-w-[335px] lg:max-w-[480px] h-full p-[25px]"
+      className="w-full max-w-[335px] lg:max-w-[480px] h-full p-4 lg:p-[25px]"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 100%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 100%) 1",
         backgroundColor: "#FFFFFF1A",
       }}
     >
-      <ul className="flex flex-col md:gap-[52px] items-start relative">
+      <ul className="flex flex-col gap-8 lg:gap-[52px] items-start relative">
         {/* Vertical line */}
         <div
           className="absolute left-[4px] top-[12px] bottom-[12px] w-[1px] bg-white"
@@ -28,7 +29,7 @@ const ScheduleCard = () => {
         {Schedule.map((item, index) => (
           <li
             key={index}
-            className="font-inter text-[16px] font-[600] leading-[24px] text-white relative pl-[20px]"
+            className="font-inter text-[14px] lg:text-[16px] font-[600] leading-[24px] text-white relative pl-[20px]"
             style={{ zIndex: 2 }}
           >
             {/* Custom bullet point */}
@@ -47,7 +48,7 @@ const ScheduleCard = () => {
 const VenueCard = () => {
   return (
     <div
-      className="w-full max-w-[335px] lg:max-w-[480px] h-[93px] p-[25px] flex gap-[8px] items-center justify-between"
+      className="w-full max-w-[335px] lg:max-w-[480px] h-[93px] p-4 lg:p-[25px] flex gap-[8px] items-center justify-between"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
@@ -59,11 +60,11 @@ const VenueCard = () => {
         alt="location icon"
         className="w-[40px] h-[40px]"
       />
-      <div className="flex flex-col gap-[18px] items-start">
-        <h3 className="font-inter text-[18px] font-[600] leading-[24px] text-white">
+      <div className="flex flex-col gap-3 lg:gap-[18px] items-start">
+        <h3 className="font-inter text-[14px] lg:text-[18px] font-[600] leading-[24px] text-white">
           The Loft LA
         </h3>
-        <p className="font-inter text-[16px] font-[400] leading-[24px] text-white">
+        <p className="font-inter text-[12px] lg:text-[16px] font-[400] leading-[24px] text-white">
           45 Warehouse District Rd, Los Angeles, CA 90012
         </p>
       </div>
@@ -75,9 +76,21 @@ const Schedule = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto">
       <section className="relative w-full">
-        {/* Background Image */}
+        {/* Mobile Background Image */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 md:hidden"
+          style={{
+            backgroundImage: `url('${MobilePeopleConcertImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "807px",
+          }}
+        ></div>
+        
+        {/* Desktop Background Image */}
+        <div
+          className="absolute inset-0 hidden md:block"
           style={{
             backgroundImage: `url('${PeopleConcertImage}')`,
             backgroundSize: "cover",
@@ -86,6 +99,7 @@ const Schedule = () => {
             height: "755px",
           }}
         ></div>
+        
         {/* Gradient Overlay */}
         {/* <div
           className="absolute inset-0"
@@ -96,8 +110,8 @@ const Schedule = () => {
           }}
         ></div> */}
         {/* Content */}
-        <div className="relative z-10 w-full flex flex-col md:gap-[50px] items-center justify-center ">
-          <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mt-[80px]">
+        <div className="relative z-10 w-full flex flex-col gap-7 lg:gap-[50px] items-center justify-center ">
+          <h1 className="text-[26px] lg:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mt-[50px] lg:mt-[80px]">
             Event <span className="font-[700] font-aeonik">SCHEDULE</span>
           </h1>
           <div className="w-full max-w-[1200px] flex flex-col xl:flex-row gap-5 items-center justify-between pb-[80px]">
@@ -105,7 +119,7 @@ const Schedule = () => {
               <ScheduleCard />
               <VenueCard />
             </div>
-            <img src={DrumImage} alt="drum" className="w-[335px] lg:w-[690px] h-[298px] lg:h-[446px]" />
+            <img src={DrumImage} alt="drum" className="w-[335px] lg:w-[690px] h-[208px] lg:h-[446px]" />
           </div>
         </div>
       </section>
