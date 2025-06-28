@@ -4,15 +4,17 @@ import About from "./components/About";
 import MediaCarousel from "./components/MediaCarousel";
 import Organiser from "./components/Organiser";
 import Venue from "./components/Venue";
+import Schedule from "./components/Schedule";
 
 const App = () => {
   return (
     <div className="main">
       <CoverSection />
-      <MediaCarousel/>
+      <MediaCarousel />
       <About />
-      <Organiser/>
-      <Venue/>
+      <Organiser />
+      <Venue />
+      <Schedule />
     </div>
   );
 };
