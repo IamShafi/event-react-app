@@ -10,7 +10,7 @@ const info = [
 const MoreInfoCard = () => {
   return (
     <div
-      className="w-full max-w-[577px] h-[115px]"
+      className="w-full max-w-[577px] h-full"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
@@ -18,7 +18,7 @@ const MoreInfoCard = () => {
       }}
     >
       <div className="w-full flex flex-col gap-[25px] px-[25px] py-[25px]">
-        <div className="flex flex-row gap-[25px] items-center">
+        <div className="flex flex-col md:flex-row gap-[25px] items-start md:items-center">
           <div className="flex gap-[10px] items-center">
             <div className="rounded-[4px] bg-white w-[20px] h-[20px] flex items-center justify-center">
               <img
@@ -44,7 +44,7 @@ const MoreInfoCard = () => {
             </h3>
           </div>
         </div>
-        <div className="flex flex-row gap-[25px] items-center">
+        <div className="flex flex-col md:flex-row gap-[25px] items-start md:items-center">
           <div className="flex gap-[10px] items-center">
             <div className="rounded-[4px] bg-white w-[20px] h-[20px] flex items-center justify-center">
               <img

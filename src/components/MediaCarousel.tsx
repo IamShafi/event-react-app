@@ -6,7 +6,7 @@ import Icon3SVG from "../../public/image/about-img-3.svg";
 import Icon4SVG from "../../public/image/about-img-4.svg";
 const MediaCarousel = () => {
   return (
-    <div className="flex flex-row gap-2 md:gap-4 items-start justify-start overflow-x-auto scrollbar-hide mt-[162px] md:mb-[80px]">
+    <div className="flex flex-row gap-2 md:gap-4 items-start justify-start 2xl:justify-center  overflow-x-auto scrollbar-hide mt-[162px] md:mb-[80px]">
         <img
           src={Icon1SVG}
           alt="about image"

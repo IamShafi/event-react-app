@@ -15,8 +15,8 @@ const App = () => {
     <div className="main">
       <CoverSection />
       <MediaCarousel />
-      {/* <About />
-      <Organiser />
+      <About />
+      {/* <Organiser />
       <Venue />
       <Schedule />
       <Tickets />
