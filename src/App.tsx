@@ -7,6 +7,8 @@ import Venue from "./components/Venue";
 import Schedule from "./components/Schedule";
 import Tickets from "./components/Tickets";
 import FeaturedSponsor from "./components/FeaturedSponsor";
+import SponsorCarousel from "./components/SponsorCarousel";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
       <Schedule />
       <Tickets />
       <FeaturedSponsor />
+      <SponsorCarousel />
+      <Footer />
     </div>
   );
 };
