@@ -16,9 +16,9 @@ const App = () => {
       <CoverSection />
       <MediaCarousel />
       <About />
-      {/* <Organiser />
+      <Organiser />
       <Venue />
-      <Schedule />
+      {/* <Schedule />
       <Tickets />
       <FeaturedSponsor />
       <SponsorCarousel />

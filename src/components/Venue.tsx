@@ -100,20 +100,20 @@ const Venue = () => {
         />
         
         {/* Content overlay */}
-        <div className="relative z-10 w-full flex justify-between items-center md:gap-[245px] md:my-[40px] md:pr-[145px]">
+        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between items-center md:gap-[245px] mx-5 my-12 md:my-[40px] md:pr-[145px]">
           <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
-            <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mb-[25px]">
+            <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
               ABOUT <span className="font-[700] font-aeonik">THE VENUE</span>
             </h1>
             {/* Line */}
             <div
-              className="w-[226px] h-[1px] md:mb-[35px]"
+              className="w-[226px] h-[1px] mb-6 md:mb-[35px]"
               style={{
                 background:
                   "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)",
               }}
             ></div>
-            <p className="text-[16px] font-inter font-[400] leading-[24px] text-white md:mb-[25px]">
+            <p className="text-[16px] font-inter font-[400] leading-[24px] text-white mb-6 md:mb-[25px]">
               Tucked away in the heart of LA's Warehouse District, The Loft LA
               is a raw, industrial space known for its immersive underground
               events. With exposed brick walls, atmospheric lighting, and an
