@@ -6,7 +6,7 @@ import Icon3SVG from "../../public/image/about-img-3.svg";
 import Icon4SVG from "../../public/image/about-img-4.svg";
 const MediaCarousel = () => {
   return (
-    <div className="flex flex-row gap-4 items-start justify-start overflow-x-auto scrollbar-hide md:mt-[162px] md:mb-[80px]">
+    <div className="flex flex-row gap-2 md:gap-4 items-start justify-start overflow-x-auto scrollbar-hide mt-[162px] md:mb-[80px]">
         <img
           src={Icon1SVG}
           alt="about image"
@@ -15,17 +15,17 @@ const MediaCarousel = () => {
         <img
           src={Icon2SVG}
           alt="about image"
-          className="w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
+          className="w-[190px] md:w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
         />
         <img
           src={Icon3SVG}
           alt="about image"
-          className="w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
+          className="w-[190px] md:w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
         />
         <img
           src={Icon4SVG}
           alt="about image"
-          className="w-[474.82px] h-[226px] md:h-[329px] flex-shrink-0"
+          className="w-[251px] md:w-[474.82px] h-[226px] md:h-[329px] flex-shrink-0"
         />
       </div>
   )

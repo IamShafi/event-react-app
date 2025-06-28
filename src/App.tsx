@@ -14,8 +14,8 @@ const App = () => {
   return (
     <div className="main">
       <CoverSection />
-      {/* <MediaCarousel />
-      <About />
+      <MediaCarousel />
+      {/* <About />
       <Organiser />
       <Venue />
       <Schedule />
