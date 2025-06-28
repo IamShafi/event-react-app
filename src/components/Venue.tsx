@@ -12,7 +12,7 @@ const info = [
 const MoreInfoCardVenue = () => {
   return (
     <div
-      className="w-full max-w-[385px] h-[225px]"
+      className="w-full max-w-[385px] h-full"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
@@ -20,7 +20,7 @@ const MoreInfoCardVenue = () => {
       }}
     >
       <div className="w-full flex flex-col items-start gap-[25px] px-[25px] py-[25px]">
-        <div className="flex flex-col gap-[25px] items-start">
+        <div className="flex flex-col gap-[25px] items-start w-[310px]">
           <div className="flex gap-[10px] items-center">
             <div className="rounded-[4px] bg-white w-[20px] h-[20px] flex items-center justify-center">
               <img
@@ -46,7 +46,7 @@ const MoreInfoCardVenue = () => {
             </h3>
           </div>
         </div>
-        <div className="flex flex-col gap-[25px] items-start">
+        <div className="flex flex-col gap-[25px] items-start w-[310px]">
           <div className="flex gap-[10px] items-center">
             <div className="rounded-[4px] bg-white w-[20px] h-[20px] flex items-center justify-center">
               <img
@@ -113,7 +113,8 @@ const Venue = () => {
         />
         
         {/* Content overlay */}
-        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between md:items-center md:gap-[245px] mx-5 my-12 md:my-[40px] md:pr-[145px]">
+        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between 
+        md:items-center md:gap-10  my-12 md:my-[40px] xl:pr-[145px]  px-5 md:px-0">
           <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
             <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
               ABOUT <span className="font-[700] font-aeonik">THE VENUE</span>
