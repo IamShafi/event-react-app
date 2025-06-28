@@ -83,7 +83,7 @@ const Schedule = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            height: "685px",
+            height: "755px",
           }}
         ></div>
         {/* Gradient Overlay */}

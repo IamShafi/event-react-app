@@ -5,6 +5,7 @@ import MediaCarousel from "./components/MediaCarousel";
 import Organiser from "./components/Organiser";
 import Venue from "./components/Venue";
 import Schedule from "./components/Schedule";
+import Tickets from "./components/Tickets";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Organiser />
       <Venue />
       <Schedule />
+      <Tickets/>
     </div>
   );
 };
