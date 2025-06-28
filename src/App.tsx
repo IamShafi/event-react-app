@@ -2,6 +2,7 @@ import React from "react";
 import CoverSection from "./components/CoverSection";
 import About from "./components/About";
 import MediaCarousel from "./components/MediaCarousel";
+import Organiser from "./components/Organiser";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <CoverSection />
       <MediaCarousel/>
       <About />
+      <Organiser/>
     </div>
   );
 };
