@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  font-family: inter; 
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../src/assets/fonts/AeonikTRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+}
+
+@theme {
+  --font-aeonik: 'Aeonik';
+}
