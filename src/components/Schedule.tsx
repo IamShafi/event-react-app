@@ -12,10 +12,10 @@ const ScheduleCard = () => {
   ];
   return (
     <div
-      className="w-full max-w-[480px] h-full p-[25px]"
+      className="w-full max-w-[335px] lg:max-w-[480px] h-full p-[25px]"
       style={{
         border: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
+        borderImage: "linear-gradient(to right, #FFFFFF 100%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 100%) 1",
         backgroundColor: "#FFFFFF1A",
       }}
     >
@@ -47,7 +47,7 @@ const ScheduleCard = () => {
 const VenueCard = () => {
   return (
     <div
-      className="w-full max-w-[480px] h-[93px] p-[25px] flex gap-[8px] items-center justify-between"
+      className="w-full max-w-[335px] lg:max-w-[480px] h-[93px] p-[25px] flex gap-[8px] items-center justify-between"
       style={{
         border: "1px solid",
         borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
@@ -98,14 +98,14 @@ const Schedule = () => {
         {/* Content */}
         <div className="relative z-10 w-full flex flex-col md:gap-[50px] items-center justify-center ">
           <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mt-[80px]">
-            Event<span className="font-[700] font-aeonik">SCHEDULE</span>
+            Event <span className="font-[700] font-aeonik">SCHEDULE</span>
           </h1>
-          <div className="w-full max-w-[1200px] flex items-center justify-between ">
+          <div className="w-full max-w-[1200px] flex flex-col xl:flex-row gap-5 items-center justify-between pb-[80px]">
             <div className="flex flex-col gap-[20px]">
               <ScheduleCard />
               <VenueCard />
             </div>
-            <img src={DrumImage} alt="drum" className="w-[690px] h-[446px]" />
+            <img src={DrumImage} alt="drum" className="w-[335px] lg:w-[690px] h-[298px] lg:h-[446px]" />
           </div>
         </div>
       </section>

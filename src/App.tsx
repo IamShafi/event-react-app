@@ -18,11 +18,11 @@ const App = () => {
       <About />
       <Organiser />
       <Venue />
-      {/* <Schedule />
-      <Tickets />
+      <Schedule />
+      {/* <Tickets /> */}
       <FeaturedSponsor />
       <SponsorCarousel />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

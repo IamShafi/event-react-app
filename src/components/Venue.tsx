@@ -114,7 +114,7 @@ const Venue = () => {
         
         {/* Content overlay */}
         <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between 
-        md:items-center md:gap-10  my-12 md:my-[40px] xl:pr-[145px]  px-5 md:px-0">
+        md:items-center md:gap-10  mt-12 md:mt-[40px] xl:pr-[145px]  px-5 md:px-0">
           <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
             <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
               ABOUT <span className="font-[700] font-aeonik">THE VENUE</span>
