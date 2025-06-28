@@ -1,35 +1,45 @@
 import React from "react";
-import PlaySVG from "../../public/logo/Play.svg";
-import Icon1SVG from "../../public/image/about-img-1.svg";
-import Icon2SVG from "../../public/image/about-img-2.svg";
-import Icon3SVG from "../../public/image/about-img-3.svg";
-import Icon4SVG from "../../public/image/about-img-4.svg";
-
+import AboutBG from "../../public/image/about-pulse-event.svg";
+import MoreInfoCard from "./MoreInfoCard";
 const About = () => {
   return (
-    <div className="w-full md:mt-[162px] md:mb-[80px]">
-      <div className="flex flex-row gap-4 items-start justify-start overflow-x-auto scrollbar-hide">
-        <img
-          src={Icon1SVG}
-          alt="about image"
-          className="w-[351px] md:w-[511.46px] h-[226px] md:h-[329px] flex-shrink-0"
-        />
-        <img
-          src={Icon2SVG}
-          alt="about image"
-          className="w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
-        />
-        <img
-          src={Icon3SVG}
-          alt="about image"
-          className="w-[277.28px] h-[226px] md:h-[329px] flex-shrink-0"
-        />
-        <img
-          src={Icon4SVG}
-          alt="about image"
-          className="w-[474.82px] h-[226px] md:h-[329px] flex-shrink-0"
-        />
-      </div>
+    <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center md:mb-[100px]">
+      {/* ABOUT Section with Background */}
+      <section
+        className="relative w-full h-screen flex items-center mt-[88px]"
+        style={{
+          backgroundImage: `url('${AboutBG}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "544px",
+        }}
+      >
+        <div className="w-full max-w-[577px] flex flex-col my-[80px] ml-[120px]">
+          <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mb-[25px]">
+            ABOUT <span className="font-[700] font-aeonik">THE EVENT</span>
+          </h1>
+          {/* Line */}
+          <div
+            className="w-[226px] h-[1px] md:mb-[35px]"
+            style={{
+              background: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)",
+            }}
+          ></div>
+          <p className="text-[16px] font-inter font-[400] leading-[24px] text-white md:mb-[25px]">
+            Warehouse Rhythms is a curated night of deep house, techno, and
+            underground energy. Set in a raw industrial space with immersive
+            sound and lighting, this event brings together music lovers,
+            creatives, and the late-night community for a one-of-a-kind sensory
+            experience.
+          </p>
+          <p className="text-[16px] font-inter font-[400] leading-[24px] text-white md:mb-[35px]">
+            Expect hypnotic beats, visual storytelling, and a high-energy crowd
+            that knows how to move.
+          </p>
+          <MoreInfoCard />
+        </div>
+      </section>
     </div>
   );
 };
