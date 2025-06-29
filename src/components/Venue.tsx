@@ -81,7 +81,7 @@ const Venue = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center">
       <section
-        className="relative w-full"
+        className="relative w-full "
         style={{
           backgroundColor: "#000000B2",
         }}
@@ -113,7 +113,7 @@ const Venue = () => {
         />
         
         {/* Content overlay */}
-        <div className="relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between 
+        <div className="px-5 relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between 
         md:items-center md:gap-10  mt-12 md:mt-[40px] xl:pr-[145px]  px-5 md:px-0">
           <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
             <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">

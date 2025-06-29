@@ -110,7 +110,7 @@ const Schedule = () => {
           }}
         ></div> */}
         {/* Content */}
-        <div className="relative z-10 w-full flex flex-col gap-7 lg:gap-[50px] items-center justify-center ">
+        <div className="px-5 relative z-10 w-full flex flex-col gap-7 lg:gap-[50px] items-center justify-center ">
           <h1 className="text-[26px] lg:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mt-[50px] lg:mt-[80px]">
             Event <span className="font-[700] font-aeonik">SCHEDULE</span>
           </h1>

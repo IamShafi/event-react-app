@@ -39,7 +39,7 @@ const SponsorCarousel = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto my-[60px] lg:mt-[80px] lg:mb-[100px] flex flex-col items-center">
+    <div className="w-full max-w-[1440px] mx-auto px-5 my-[60px] lg:mt-[80px] lg:mb-[100px] flex flex-col items-center">
       <h1 className="text-center text-[26px] md:text-[42px] font-aeonik font-normal leading-[53px] text-white uppercase mb-10 md:mb-[50px]">
         Other <span className="font-[700] font-aeonik">Sponsors</span>
       </h1>
