@@ -1,4 +1,5 @@
 import React from "react";
+import TicketBG from "../../../public/image/ticket-bg.svg"
 
 const Ticket = () => {
   return (
@@ -11,7 +12,9 @@ const Ticket = () => {
           </span>
         </div>
         <div className="flex flex-col lg:flex-row gap-[] lg:gap-[25px]">
+          {/* Image */}
           <div className="w-full max-w-[811px]"></div>
+          {/* Send to */}
           <div className="w-full max-w-[364px]"></div>
         </div>
       </div>
