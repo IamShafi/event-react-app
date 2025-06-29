@@ -40,10 +40,25 @@ const SponsorCarousel = () => {
           alt="about image"
           className="w-[137px] h-[56px] md:h-[56px] flex-shrink-0"
         />
+        <img
+          src={Icon6SVG}
+          alt="about image"
+          className="w-[137px] h-[56px] md:h-[56px] flex-shrink-0"
+        />
+        <img
+          src={Icon7SVG}
+          alt="about image"
+          className="w-[137px] h-[56px] md:h-[56px] flex-shrink-0"
+        />
+        <img
+          src={Icon8SVG}
+          alt="about image"
+          className="w-[137px] h-[56px] md:h-[56px] flex-shrink-0"
+        />
       </div>
       {/* Mobile */}
       <div className="flex lg:hidden flex-row gap-[] justify-between w-full max-w-[322px]">
-        <div className="w-full max-w-[99px] flex flex-col gap-[52px]">
+        <div className="w-full max-w-[99px] flex flex-col gap-[52px] items-center">
           <img
             src={Icon1SVG}
             alt="about image"
@@ -65,26 +80,22 @@ const SponsorCarousel = () => {
             className="w-[86px] h-[41px] flex-shrink-0"
           />
         </div>
-        <div className="w-full max-w-[153px] flex flex-col gap-[57px]">
+        <div className="w-full max-w-[153px] flex flex-col gap-[57px] item-center">
           <img
             src={Icon2SVG}
             alt="about image"
-            className="w-[152px] h-[29px] flex-shrink-0"
+            className="w-[152px] h-[29px] "
           />
           <img
             src={Icon4SVG}
             alt="about image"
-            className="w-[152px] h-[20px] flex-shrink-0"
+            className="w-[152px] h-[20px] "
           />
-          <img
-            src={Icon7SVG}
-            alt="about image"
-            className="w-[86px] h-[43px] flex-shrink-0"
-          />
+          <img src={Icon7SVG} alt="about image" className="w-[86px] h-[43px]" />
           <img
             src={Icon8SVG}
             alt="about image"
-            className="w-[73px] h-[38px] flex-shrink-0"
+            className="w-[73px] h-[38px] "
           />
         </div>
       </div>

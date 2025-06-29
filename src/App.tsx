@@ -20,7 +20,7 @@ const App = () => {
       <Venue />
       <Schedule />
       {/* <Tickets /> */}
-      {/* <FeaturedSponsor /> */}
+      <FeaturedSponsor />
       <SponsorCarousel />
       {/* <Footer /> */}
     </div>
