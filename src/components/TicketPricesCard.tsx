@@ -74,7 +74,7 @@ const TicketPricesCard = () => {
             Quantity
           </h3>
           {/* Buttons */}
-          <div className="flex flex-col max-w-[390px]:gap-[110px] gap-[80px] lg:gap-[36px]">
+          <div className="flex flex-col gap-[100px] sm:gap-[80px] lg:gap-[50px]">
             {/* 1st row */}
             <div className="flex items-center w-full max-w-[141px] h-[50px]">
               <button
