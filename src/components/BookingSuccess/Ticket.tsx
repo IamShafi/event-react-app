@@ -1,5 +1,10 @@
 import React from "react";
 import TicketBG from "../../../public/image/ticket-bg.svg"
+import TicketQR from "../../../public/image/ticket-qr.svg"
+import emailIcon from "../../../public/logo/socials/email.svg"
+import printIcon from "../../../public/logo/socials/print.svg"
+import applepayIcon from "../../../public/logo/socials/apple.svg"
+import gpayIcon from "../../../public/logo/socials/GPay.svg"
 
 const Ticket = () => {
   return (
