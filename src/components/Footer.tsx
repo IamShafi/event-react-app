@@ -7,17 +7,19 @@ import ytIcon from "../../public/logo/socials/yt.svg";
 const Footer = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto px-5  pb-[30px] flex flex-col-reverse lg:flex-col items-center justify-center">
-      <p className="text-center mt-6 block lg:hiddenfont-inter text-[14px] lg:text-[16px] font-[400] leading-[24px] text-white">
-          Copyright © 2010-2025 Whatzzon. <br/> All rights reserved.
-        </p>
-        {/* footer bottom 1*/}
-      <div className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px] mt-12 lg:mt-[60px] lg:mb-[67px] mb-15"
+      <p className="text-center mt-6 block lg:hidden font-inter text-[14px] lg:text-[16px] font-[400] leading-[24px] text-white">
+        Copyright © 2010-2025 Whatzzon. 
+        <br /> All rights reserved.
+      </p>
+      {/* footer bottom 1*/}
+      <div
         style={{
           borderTop: "1px solid",
           borderBottom: "1px solid",
           borderImage:
-            "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF 0%,) 1",
+            "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%,  #FFFFFF 100%, #FFFFFF 0%) 1",
         }}
+        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px] mt-12 lg:pt-[60px] lg:pb-[67px] mb-15"
       >
         <h1 className="font-aeonik font-[900] leading-[65px] text-[26px] lg:text-[42px] text-white uppercase">
           Follow Whatzzon
@@ -47,12 +49,15 @@ const Footer = () => {
       </div>
       {/* footer bottom 2*/}
       <div className="w-full max-w-[1193px] flex flex-col lg:flex-row gap-4 items-center justify-between lg:gap-[52px] lg:mt-[37px] mb-9 lg:mb-0">
-        <p className="hidden lg:blockfont-inter text-[16px] font-[400] leading-[24px] text-white">
+        <p className="hidden lg:block font-inter text-[16px] font-[400] leading-[24px] text-white">
           Copyright © 2010-2025 Whatzzon. All rights reserved.
         </p>
-        <img src="/logo/header-logo.svg" alt="" className="w-[112px] h-[59px]" />
+        <img
+          src="/logo/header-logo.svg"
+          alt=""
+          className="w-[112px] h-[59px]"
+        />
       </div>
-      
     </div>
   );
 };
