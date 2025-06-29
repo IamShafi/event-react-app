@@ -8,7 +8,7 @@ const About = () => {
     <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center md:mb-[100px]">
       {/* ABOUT Section with Background */}
       <section
-        className="relative w-full flex items-center mt-[88px] h-[834px] md:h-[544px]"
+        className="relative w-full flex items-center mt-[88px] h-[934px] md:h-[544px]"
         style={{
           backgroundImage: `url('${MobileAboutBG}')`,
           backgroundSize: "cover",

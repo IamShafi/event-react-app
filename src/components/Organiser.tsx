@@ -1,5 +1,6 @@
 import React from "react";
 import OrganiserImage from "../../public/image/organizer-bg.svg";
+import OrganiserImageMobile from "../../public/image/organizer-bg.svg";
 
 const Organiser = () => {
   return (
@@ -9,9 +10,16 @@ const Organiser = () => {
           <img
             src={OrganiserImage}
             alt=""
-            className="w-[327px] h-[270px] sm:w-[594px] sm:h-[351px] mt-[15px] ml-[15px]"
+            className="hidden lg:block w-[327px] h-[270px] sm:w-[594px] sm:h-[351px] mt-[15px] ml-[15px]"
           />
+         <div className="w-[327px] h-[270px]"><img
+            src={OrganiserImageMobile}
+            alt=""
+            className="block lg:hidden w-[327px] h-full object-cover mt-[15px] ml-[15px]"
+          /></div>
         </div>
+        
+         
         <div className="flex flex-col w-full max-w-[527px] px-5">
           <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mb-[35px]">
             Hosted by{" "}
