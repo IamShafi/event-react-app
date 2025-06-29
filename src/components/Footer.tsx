@@ -14,12 +14,11 @@ const Footer = () => {
       {/* footer bottom 1*/}
       <div
         style={{
-          borderTop: "1px solid",
           borderBottom: "1px solid",
           borderImage:
             "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%,  #FFFFFF 100%, #FFFFFF 0%) 1",
         }}
-        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px]  lg:pt-[60px] lg:pb-[67px] pb-15"
+        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px]  lg:pt-[60px] lg:pb-[67px] pb-15 border-t-0 lg:border-t"
       >
         <h1 className="font-aeonik font-[900] leading-[65px] text-[26px] lg:text-[42px] text-white uppercase">
           Follow Whatzzon
@@ -40,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         {/* links */}
-        <div className="w-full max-w-[482px] flex justify-center flex-wrap gap-[30px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white">
+        <div className="w-full max-w-[202px] lg:max-w-[482px] flex justify-center flex-wrap gap-3 lg:gap-[30px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white">
           <p className="cursor-pointer">Home</p>
           <p className="cursor-pointer">Explore Events</p>
           <p className="cursor-pointer">Contact Us</p>
