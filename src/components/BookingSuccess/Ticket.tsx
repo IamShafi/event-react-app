@@ -1,5 +1,6 @@
 import React from "react";
 import TicketBG from "../../../public/image/book-ticket.png";
+import MobileTicketBG from "../../../public/image/book-ticket-mobile.png";
 import TicketQR from "../../../public/image/ticket-qr.svg";
 import emailIcon from "../../../public/logo/socials/email.svg";
 import printIcon from "../../../public/logo/socials/print.svg";
@@ -45,17 +46,17 @@ const Ticket = () => {
                 <div className="font-inter font-normal text-[18px]">Email: jane@email.com</div>
               </div>
               {/* QR Code (Right) */}
-              <div className="flex flex-col items-center justify-center flex-shrink-0 w-[200px] ml-8">
+              <div className="flex flex-col items-center justify-center flex-shrink-0 w-[240px] ml-8">
                 <img
                   src={TicketQR}
                   alt="Ticket QR"
-                  className="w-[160px] h-[160px] object-contain"
+                  className="w-[240px] h-[240px] object-contain"
                 />
               </div>
             </div>
           </div>
           {/* Sent-to Section (Right) */}
-          <div className="w-full max-w-[364px] flex flex-col gap-4 bg-white rounded-[16px] p-6 shadow-md font-inter">
+          <div className="w-full max-w-[364px] flex flex-col justify-center gap-4 bg-white rounded-[16px] p-6 shadow-md font-inter">
             <button className="font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
               <img src={emailIcon} alt="Email" className="w-6 h-6" />
               <span className="font-[800] text-[16px]">SENT TO EMAIL</span>
