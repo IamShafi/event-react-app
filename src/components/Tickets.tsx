@@ -18,8 +18,8 @@ const Tickets = () => {
         }}
       >
         {/* Content */}
-        <h1 className=" text-center text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase md:mt-[80px] md:mb-[50px]">
-          GET YOUR<span className="font-[700] font-aeonik">TICKETS NOW</span>
+        <h1 className=" text-center text-[26px] lg:text-[42px] font-aeonik font-normal leading-[35px] lg:leading-[65px] text-white uppercase md:mt-[80px] mb-[30px] md:mb-[50px]">
+          GET YOUR {""}<br className="block lg:hidden"/><span className="font-[700] font-aeonik">TICKETS NOW</span>
         </h1>
         <TicketPricesCard />
         <div className="w-[184px] h-[60px] bg-white p-[3px] mt-[50px] mb-[80px]">
