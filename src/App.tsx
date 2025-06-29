@@ -22,7 +22,7 @@ const App = () => {
       {/* <Tickets /> */}
       <FeaturedSponsor />
       <SponsorCarousel />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
