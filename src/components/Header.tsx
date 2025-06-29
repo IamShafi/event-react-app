@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,11 +16,13 @@ const Header = () => {
 
       {/* Content */}
       <div className="relative z-10">
+        <Link to="/">
         <img
           src="/logo/header-logo.svg"
           alt="logo"
           className="w-[82px] md:w-[112px] h-[43px] md:h-[59px]"
         />
+        </Link>
       </div>
     </div>
   );

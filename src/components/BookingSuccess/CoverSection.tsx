@@ -11,7 +11,7 @@ const CoverSection = () => {
       {/* Background Image */}
       {/* Hero Section with Background */}{" "}
       <section
-        className="relative w-full flex items-center justify-center h-[500px] md:h-[419px]"
+        className="relative w-full flex items-center justify-center h-[500px] md:h-[519px]"
         style={{
           backgroundImage: `url('${MobileHeroImage}')`,
           backgroundSize: "cover",
@@ -32,7 +32,7 @@ const CoverSection = () => {
         {/* Black Linear Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/40"></div>
         {/* Content */}
-        <div className="w-full flex items-center justify-center mt-[476px] mb-10 md:mb-15 z-20">
+        <div className="w-full flex items-center justify-center mt-[176px] mb-10 md:mb-15 z-20">
           <CoverInfoOverlay />
         </div>
       </section>
