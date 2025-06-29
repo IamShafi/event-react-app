@@ -32,17 +32,17 @@ const Ticket = () => {
             <div className="flex flex-row w-full h-full p-8">
               {/* Ticket Info (Left) */}
               <div className="flex-1 flex flex-col justify-center gap-2 text-left text-black">
-                <div className="font-bold text-[24px] mb-2">
+                <div className="font-bold text-[26px] leading-[65px] mb-2">
                   WAREHOUSE RHYTHMS
                 </div>
-                <div className="text-[16px]">
+                <div className="font-inter font-normal text-[18px]">
                   Date & Time: July 27, 2025 · 9:00 PM
                 </div>
-                <div className="text-[16px]">Location: The Loft LA</div>
-                <div className="text-[16px]">Ticket Type: VIP Entry</div>
-                <div className="text-[16px]">Order ID: #WHZ12345678</div>
-                <div className="text-[16px]">Name: Jane Doe</div>
-                <div className="text-[16px]">Email: jane@email.com</div>
+                <div className="font-inter font-normal text-[18px]">Location: The Loft LA</div>
+                <div className="font-inter font-normal text-[18px]">Ticket Type: VIP Entry</div>
+                <div className="font-inter font-normal text-[18px]">Order ID: #WHZ12345678</div>
+                <div className="font-inter font-normal text-[18px]">Name: Jane Doe</div>
+                <div className="font-inter font-normal text-[18px]">Email: jane@email.com</div>
               </div>
               {/* QR Code (Right) */}
               <div className="flex flex-col items-center justify-center flex-shrink-0 w-[200px] ml-8">
@@ -58,26 +58,26 @@ const Ticket = () => {
           <div className="w-full max-w-[364px] flex flex-col gap-4 bg-white rounded-[16px] p-6 shadow-md font-inter">
             <button className="font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
               <img src={emailIcon} alt="Email" className="w-6 h-6" />
-              <span className="font-medium text-[16px]">SENT TO EMAIL</span>
+              <span className="font-[800] text-[16px]">SENT TO EMAIL</span>
             </button>
             <button className="font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
               <img src={printIcon} alt="Print" className="w-6 h-6" />
-              <span className="font-medium text-[16px]">PRINT TICKET</span>
+              <span className="font-[800] text-[16px]">PRINT TICKET</span>
             </button>
             <button className="font-[900] text-[14px] lg:text-[16px] flex items-center gap-3 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
               <div className="w-[80px] h-[52px] bg-black flex items-center justify-center">
                 <img src={applepayIcon} alt="Apple Pay" className="w-[55px] h-6" />
               </div>
-              <span className="font-medium text-[16px]">
+              <span className="font-[800] text-[16px]">
                 ADD TO APPLE WALLET
               </span>
             </button>
-            <button className="font-[900] text-[14px] lg:text-[16px] flex items-center gap-3 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
+            <button className="font-[900] text-[14px] lg:text-[16px] flex items-center gap-2 border border-[#E5E7EB] rounded-lg py-2 px-2 hover:bg-gray-50 transition">
               <div className="w-[80px] h-[52px] bg-black flex items-center justify-center">
                 <img src={gpayIcon} alt="Google Pay" className="w-[60px] h-6" />
               </div>
 
-              <span className="font-medium text-[16px]">
+              <span className="font-[800] text-[16px]">
                 ADD TO GOOGLE WALLET
               </span>
             </button>
