@@ -19,7 +19,7 @@ const Footer = () => {
           borderImage:
             "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%,  #FFFFFF 100%, #FFFFFF 0%) 1",
         }}
-        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px] pt-12 lg:pt-[60px] lg:pb-[67px] pb-15"
+        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px]  lg:pt-[60px] lg:pb-[67px] pb-15"
       >
         <h1 className="font-aeonik font-[900] leading-[65px] text-[26px] lg:text-[42px] text-white uppercase">
           Follow Whatzzon
