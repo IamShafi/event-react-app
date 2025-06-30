@@ -34,7 +34,10 @@ const About = () => {
           <div
             className="w-[226px] h-[1px] mb-[25px] md:mb-[35px]"
             style={{
-              background: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)",
+              border: "1px solid",
+
+              borderImageSource: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 35.1%)",
+              borderImageSlice: 1,
             }}
           ></div>
           <p className="text-[14px] md:text-[16px] font-inter font-[400] leading-[24px] text-white mb-[20px] md:mb-[25px]">
@@ -50,7 +53,11 @@ const About = () => {
           </p>
           <MoreInfoCard />
           <div className="sm:hidden w-full flex items-center justify-center">
-            <img src={AboutImage} alt="" className="w-[375px] h-[336px] mt-4 mb-15"/>
+            <img
+              src={AboutImage}
+              alt=""
+              className="w-[375px] h-[336px] mt-4 mb-15"
+            />
           </div>
         </div>
       </section>

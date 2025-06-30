@@ -13,8 +13,10 @@ const MoreInfoCard = () => {
       className="w-full max-w-[577px] h-full"
       style={{
         border: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
-        backgroundColor: "#FFFFFF1A",
+        borderImageSource:
+          "linear-gradient(97.99deg, rgba(255, 255, 255, 0.3) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.3) 100.55%)",
+        borderImageSlice: 1,
+        background: "#FFFFFF1A",
       }}
     >
       <div className="w-full flex flex-col gap-[25px] px-[25px] py-[25px]">
