@@ -15,8 +15,10 @@ const MoreInfoCardVenue = () => {
       className="w-full max-w-[385px] h-full"
       style={{
         border: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
-        backgroundColor: "#FFFFFF1A",
+        borderImageSource:
+          "linear-gradient(97.99deg, rgba(255, 255, 255, 0.3) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.3) 100.55%)",
+        borderImageSlice: 1,
+        background: "#FFFFFF1A",
       }}
     >
       <div className="w-full flex flex-col items-start gap-[25px] px-[25px] py-[25px]">
@@ -123,8 +125,10 @@ const Venue = () => {
             <div
               className="w-[226px] h-[1px] mb-6 md:mb-[35px]"
               style={{
-                background:
-                  "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)",
+                border: "1px solid",
+  
+                borderImageSource: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 35.1%)",
+                borderImageSlice: 1,
               }}
             ></div>
             <p className="text-[16px] font-inter font-[400] leading-[24px] text-white mb-6 md:mb-[25px]">
