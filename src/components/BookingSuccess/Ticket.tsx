@@ -23,7 +23,7 @@ const Ticket = () => {
           {/* Ticket Section Image section */}
           {/* Desktop Ticket (>=1024px) */}
           <div
-            className="hidden lg:flex relative w-full max-w-[811px] rounded-[16px] items-center justify-center p-0 overflow-hidden"
+            className="hidden lg:flex relative w-full max-w-[811px] items-center justify-center p-0 overflow-hidden"
             style={{
               backgroundImage: `url(${TicketBG})`,
               backgroundRepeat: "no-repeat",
@@ -31,9 +31,9 @@ const Ticket = () => {
               minHeight: "320px",
             }}
           >
-            <div className="flex flex-col lg:flex-row w-full h-full p-8">
+            <div className="flex flex-col lg:flex-row lg:justify-between w-full h-full py-[35px] pl-[65px] pr-[44px]">
               {/* Ticket Info (Left) */}
-              <div className="flex-1 flex flex-col justify-center gap-2 text-left text-black">
+              <div className="w-full max-w-[313px] flex-1 flex flex-col justify-center gap-2 text-left text-black">
                 <div className="font-bold text-[26px] leading-[65px] mb-2">
                   WAREHOUSE RHYTHMS
                 </div>
