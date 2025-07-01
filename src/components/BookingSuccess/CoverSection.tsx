@@ -11,7 +11,7 @@ const CoverSection = () => {
       {/* Background Image */}
       {/* Hero Section with Background */}{" "}
       <section
-        className="relative w-full flex items-center justify-center h-[500px] md:h-[519px]"
+        className="relative w-full flex items-center justify-center h-[419px] md:h-[519px]"
         style={{
           backgroundImage: `url('${MobileHeroImage}')`,
           backgroundSize: "cover",

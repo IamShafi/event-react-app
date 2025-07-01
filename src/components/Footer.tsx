@@ -14,11 +14,12 @@ const Footer = () => {
       {/* footer bottom 1*/}
       <div
         style={{
-          borderBottom: "1px solid",
-          borderImage:
-            "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%,  #FFFFFF 100%, #FFFFFF 0%) 1",
+          border: "1px solid",
+          borderImageSource:
+            "linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%)",
+          borderImageSlice: 1,
         }}
-        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px]  lg:pt-[60px] lg:pb-[67px] pb-15 border-t-0 lg:border-t"
+        className="w-full max-w-[1193px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-7 lg:gap-[52px]  pt-[50px] lg:pt-[60px] lg:pb-[67px] pb-15 lg:border-t"
       >
         <h1 className="font-aeonik font-[900] leading-[65px] text-[26px] lg:text-[42px] text-white uppercase">
           Follow Whatzzon
