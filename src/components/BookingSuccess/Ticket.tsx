@@ -9,7 +9,7 @@ import gpayIcon from "../../../public/logo/socials/GPay.svg";
 
 const Ticket = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto py-[60px] px-[20px] lg:px-[120px] lg:py-[100px]">
+    <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center py-[60px] px-[20px] lg:py-[100px]">
       <div className="w-full max-w-[1200px] flex flex-col gap-[50px] items-center justify-center">
         <div className="text-center flex flex-col lg:flex-row gap-1 items-center leading-[65px] text-white ">
           <span className="font-inter font-bold uppercase text-[26px] md:text-[42px] lg:mr-2">
@@ -19,11 +19,11 @@ const Ticket = () => {
             has been emailed to you automatically.
           </span>
         </div>
-        <div className="flex flex-col lg:flex-row items-center gap-[25px] w-full">
+        <div className="flex flex-col xl:flex-row items-center gap-[25px] w-full">
           {/* Ticket Section Image section */}
           {/* Desktop Ticket (>=1024px) */}
           <div
-            className="hidden lg:flex relative w-full max-w-[811px] items-center justify-center p-0 overflow-hidden"
+            className="hidden xl:flex relative w-full max-w-[811px] items-center justify-center p-0 overflow-hidden"
             style={{
               backgroundImage: `url(${TicketBG})`,
               backgroundRepeat: "no-repeat",
@@ -31,9 +31,10 @@ const Ticket = () => {
               minHeight: "320px",
             }}
           >
-            <div className="flex flex-col lg:flex-row lg:justify-between w-full h-full py-[35px] pl-[65px] pr-[44px]">
+            {/* py-[35px] pl-[40px]  */}
+            <div className="flex flex-col lg:flex-row lg:justify-between w-full h-full xl:pl-[65px] pr-[44px] ">
               {/* Ticket Info (Left) */}
-              <div className="w-full max-w-[313px] flex-1 flex flex-col justify-center gap-2 text-left text-black">
+              <div className="py-[25px] w-full max-w-[313px] flex-1 flex flex-col justify-center gap-2 text-left text-black">
                 <div className="font-bold text-[26px] leading-[65px] mb-2">
                   WAREHOUSE RHYTHMS
                 </div>
@@ -58,7 +59,7 @@ const Ticket = () => {
           </div>
           {/* Mobile Ticket (<1024px) */}
           <div
-            className="flex lg:hidden relative w-full max-w-[335px] rounded-[16px] items-center justify-center p-0 overflow-hidden"
+            className="flex xl:hidden relative w-full max-w-[335px]  items-center justify-center p-0 overflow-hidden"
             style={{
               backgroundImage: `url(${MobileTicketBG})`,
               backgroundRepeat: "no-repeat",
@@ -93,7 +94,7 @@ const Ticket = () => {
             </div>
           </div>
           {/* Sent-to Section (Right) */}
-          <div className="w-full max-w-[364px] flex flex-col justify-center gap-4 bg-white rounded-[16px] p-6 shadow-md font-inter">
+          <div className="w-full max-w-[364px] flex flex-col justify-center gap-4 bg-white  p-6 shadow-md font-inter">
             <button className="cursor-pointer font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E6E6E6]  py-2 px-2 hover:bg-gray-50 transition">
               <img src={emailIcon} alt="Email" className="w-6 h-6" />
               <span className="font-[800] text-[16px]">SENT TO EMAIL</span>
