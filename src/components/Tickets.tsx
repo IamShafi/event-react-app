@@ -44,20 +44,18 @@ const Tickets = () => {
         <Modal
           isOpen={showModal}
           onClose={() => setShowModal(false)}
-          title="Proceed to Booking?"
           actions={
             <button
-              className="bg-black text-white px-6 py-2 rounded font-semibold hover:bg-gray-800 mb-2"
+              className=" cursor-pointer bg-white text-black w-full max-w-[536px] text-center px-6 py-[20px] font-inter font-[700] text-[16px] leading-[24px] uppercase"
               onClick={() => {
                 setShowModal(false);
                 navigate('/booking-success');
               }}
             >
-              Continue
+              Checkout
             </button>
           }
         >
-          You are about to complete your booking. Continue?
         </Modal>
       </section>
     </div>
