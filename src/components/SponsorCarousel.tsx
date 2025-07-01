@@ -7,6 +7,7 @@ import Icon5SVG from "../../public/image/sponsor-5.svg";
 import Icon6SVG from "../../public/image/sponsor-6.svg";
 import Icon7SVG from "../../public/image/sponsor-7.svg";
 import Icon8SVG from "../../public/image/sponsor-8.svg";
+import Icon9SVG from "../../public/image/sponsor-9.svg";
 
 const SponsorCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -45,10 +46,10 @@ const SponsorCarousel = () => {
       </h1>
       {/* Desktop */}
       <div className="w-full max-w-[1440px] overflow-hidden">
-        <div 
+        <div
           ref={carouselRef}
-          className="w-full hidden lg:flex flex-row gap-[130px] items-start justify-start overflow-x-auto scrollbar-hide scroll-smooth"
-          style={{ scrollBehavior: 'smooth' }}
+          className="w-full hidden lg:flex flex-row gap-[130px] items-center justify-start overflow-x-auto scrollbar-hide scroll-smooth"
+          style={{ scrollBehavior: "smooth" }}
         >
           <img
             src={Icon1SVG}
@@ -135,7 +136,7 @@ const SponsorCarousel = () => {
       </div>
 
       {/* Mobile */}
-      <div className="flex lg:hidden flex-row gap-[] justify-between w-full max-w-[322px]">
+      <div className="flex lg:hidden flex-row items-center gap-[] justify-between w-full max-w-[322px]">
         <div className="w-full max-w-[99px] flex flex-col gap-[52px] items-center">
           <img
             src={Icon1SVG}
@@ -169,14 +170,28 @@ const SponsorCarousel = () => {
             alt="about image"
             className="w-[152px] h-[20px] "
           />
-          <img src={Icon7SVG} alt="about image" className="w-[86px] h-[43px]" />
-          <img
-            src={Icon8SVG}
-            alt="about image"
-            className="w-[73px] h-[38px] "
-          />
+          <div className="w-full flex items-center justify-center">
+            <img
+              src={Icon7SVG}
+              alt="about image"
+              className="w-[86px] h-[43px]"
+            />
+          </div>
+
+          <div className="w-full flex items-center justify-center">
+            <img
+              src={Icon8SVG}
+              alt="about image"
+              className="w-[73px] h-[38px] "
+            />
+          </div>
         </div>
       </div>
+      <img
+            src={Icon9SVG}
+            alt="about image"
+            className="w-[128px] h-[28px] block lg:hidden mt-10"
+          />
     </div>
   );
 };
