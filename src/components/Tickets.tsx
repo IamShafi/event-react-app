@@ -15,7 +15,7 @@ const Tickets = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "718px",
+          height: "768px",
         }}
       >
         {/* Content */}
@@ -23,11 +23,11 @@ const Tickets = () => {
           GET YOUR {""}<br className="block lg:hidden"/><span className="font-[700] font-aeonik">TICKETS NOW</span>
         </h1>
         <TicketPricesCard />
-        <div className="w-[184px] h-[60px] bg-white p-[3px] mt-[30px] lg:mt-[50px] lg:mb-[80px]">
+        <div className="w-full max-w-[117px] lg:max-w-[184px] h-[38px] lg:h-[60px] bg-white p-[3px] mt-[30px] lg:mt-[50px] lg:mb-[80px]">
             <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-                <div className="flex items-center gap-[10px]">
+                <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px]">
                     <img src={ArrowRight} alt="" className="w-[25px] h-[12px]"/>
-                    <Link to="/booking-success"><p>Checkout</p></Link>
+                    <Link to="/booking-success"><p className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase">Checkout</p></Link>
                 </div>
             </div>
         </div>

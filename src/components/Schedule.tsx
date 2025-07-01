@@ -16,8 +16,10 @@ const ScheduleCard = () => {
       className="w-full max-w-[335px] lg:max-w-[480px] h-full p-4 lg:p-[25px]"
       style={{
         border: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 100%, #FFFFFF 0%, #FFFFFF 0%, #FFFFFF 100%) 1",
-        backgroundColor: "#FFFFFF1A",
+        borderImageSource:
+          "linear-gradient(97.99deg, rgba(255, 255, 255, 0.3) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.3) 100.55%)",
+        borderImageSlice: 1,
+        background: "#FFFFFF0A",
       }}
     >
       <ul className="flex flex-col gap-8 lg:gap-[52px] items-start relative">
@@ -51,8 +53,10 @@ const VenueCard = () => {
       className="w-full max-w-[335px] lg:max-w-[480px] h-[93px] p-4 lg:p-[25px] flex gap-[8px] items-center justify-between"
       style={{
         border: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%) 1",
-        backgroundColor: "#FFFFFF1A",
+        borderImageSource:
+          "linear-gradient(97.99deg, rgba(255, 255, 255, 0.3) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.3) 100.55%)",
+        borderImageSlice: 1,
+        background: "#FFFFFF0A",
       }}
     >
       <img
