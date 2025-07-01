@@ -97,17 +97,17 @@ const Ticket = () => {
           <div className="w-full max-w-[364px] flex flex-col justify-center gap-4 bg-white  p-6 shadow-md font-inter">
             <button className="cursor-pointer font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E6E6E6]  py-2 px-2 hover:bg-gray-50 transition">
               <img src={emailIcon} alt="Email" className="w-6 h-6" />
-              <span className="font-[800] text-[16px]">SENT TO EMAIL</span>
+              <span className="font-[800] text-[14px] lg:text-[16px]">SENT TO EMAIL</span>
             </button>
             <button className="cursor-pointer font-[900] text-[14px] lg:text-[16px] flex justify-center items-center gap-3 border border-[#E6E6E6]  py-2 px-2 hover:bg-gray-50 transition">
               <img src={printIcon} alt="Print" className="w-6 h-6" />
-              <span className="font-[800] text-[16px]">PRINT TICKET</span>
+              <span className="font-[800] text-[14px] lg:text-[16px]">PRINT TICKET</span>
             </button>
             <button className="cursor-pointer font-[900] text-[14px] lg:text-[16px] flex items-center gap-3 border border-[#E6E6E6]  py-2 px-2 hover:bg-gray-50 transition">
               <div className="w-[80px] h-[52px] bg-black flex items-center justify-center">
                 <img src={applepayIcon} alt="Apple Pay" className="w-[55px] h-6" />
               </div>
-              <span className="font-[800] text-[16px]">
+              <span className="font-[800] text-[14px] lg:text-[16px]">
                 ADD TO APPLE WALLET
               </span>
             </button>
@@ -116,7 +116,7 @@ const Ticket = () => {
                 <img src={gpayIcon} alt="Google Pay" className="w-[60px] h-6" />
               </div>
 
-              <span className="font-[800] text-[16px]">
+              <span className="font-[800] text-[14px] lg:text-[16px]">
                 ADD TO GOOGLE WALLET
               </span>
             </button>
