@@ -1,4 +1,4 @@
-import React from "react";
+
 import CorrectIcon from "../../public/logo/correct-icon.svg";
 
 const info = [

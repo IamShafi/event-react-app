@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 // import PlaySVG from "../../public/logo/Play.svg";
 import Icon1SVG from "../../public/image/about-img-1.svg";
 import Icon2SVG from "../../public/image/about-img-2.svg";

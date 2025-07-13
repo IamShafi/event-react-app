@@ -6,7 +6,7 @@ interface ModalProps {
   actions?: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, actions }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, actions }) => {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">

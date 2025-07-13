@@ -1,4 +1,4 @@
-import React from "react";
+
 import VenueImage from "../../public/image/venue-concert.svg";
 import MoobileVenueImage from "../../public/image/mobile-venue-concert.svg";
 import CorrectIcon from "../../public/logo/correct-icon.svg";

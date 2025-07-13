@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TicketBG from "../../public/image/ticket-bg.svg";
 import TicketPricesCard from "./TicketPricesCard";
 import ArrowRight from "../../public/logo/arrow-right.svg"
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Modal from "./Modal";
 
 const Tickets = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+
 import PeopleConcertImage from "../../public/image/people-concert.png";
 import MobilePeopleConcertImage from "../../public/image/mobile-people-concert.svg";
 import DrumImage from "../../public/image/people-concert_drum.svg";

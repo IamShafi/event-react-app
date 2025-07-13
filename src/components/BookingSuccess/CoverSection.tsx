@@ -1,4 +1,4 @@
-import React from "react";
+
 import Header from "../Header";
 import MobileHeroImage from "../../../public/image/BookingSuccess-herobg-mobile.svg";
 import HeroImage from "../../../public/image/BookingSuccess-herobg.svg";

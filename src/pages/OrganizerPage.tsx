@@ -1,8 +1,9 @@
-import React from "react";
+
 import CoverSection from "../components/Organizer/CoverSection";
 import HeroImage from "../../public/image/organizer_bg_desktop.svg";
 import MobileHeroImage from "../../public/image/organizer_bg_mobile.svg";
 import About from "../components/Organizer/About";
+import ReachOut from "../components/Organizer/ReachOut";
 
 const OrganizerPage = () => {
   return (
@@ -16,6 +17,7 @@ const OrganizerPage = () => {
         overlayPositionClass="mt-[444px] mb-10 md:mb-15"
       />
       <About />
+      <ReachOut/>
     </div>
   );
 };

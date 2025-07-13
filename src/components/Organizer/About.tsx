@@ -1,4 +1,4 @@
-import React from "react";
+
 import AboutImage from "../../../public/image/organizer-about-bg.svg";
 import MobileVenueImage from "../../../public/image/organizer-about-bg-mobile.svg";
 import RightAboutImage from "../../../public/image/organizer-about-image-desktop.svg";

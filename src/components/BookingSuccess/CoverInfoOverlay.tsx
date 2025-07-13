@@ -1,4 +1,4 @@
-import React from "react";
+
 import logo from "../../../public/logo/book-logo.png";
 
 const CoverInfoOverlay = () => {

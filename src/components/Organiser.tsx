@@ -1,4 +1,4 @@
-import React from "react";
+
 import OrganiserImage from "../../public/image/organizer-bg.svg";
 import OrganiserImageMobile from "../../public/image/organizer-bg.svg";
 

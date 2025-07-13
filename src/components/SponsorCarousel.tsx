@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Icon1SVG from "../../public/image/sponsor-1.svg";
 import Icon2SVG from "../../public/image/sponsor-2.svg";
 import Icon3SVG from "../../public/image/sponsor-3.svg";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import TicketBG from "../../../public/image/book-ticket.png";
 import MobileTicketBG from "../../../public/image/book-ticket-mobile.png";
 import TicketQR from "../../../public/image/ticket-qr.svg";

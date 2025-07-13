@@ -1,4 +1,4 @@
-import React from "react";
+
 import AboutBG from "../../public/image/about-pulse-event.svg";
 import MobileAboutBG from "../../public/image/mobile-about-pulse-event.svg";
 import AboutImage from "../../public/image/people-concert_drum-mobile.svg";
