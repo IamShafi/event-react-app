@@ -4,6 +4,7 @@ import HeroImage from "../../public/image/organizer_bg_desktop.svg";
 import MobileHeroImage from "../../public/image/organizer_bg_mobile.svg";
 import About from "../components/Organizer/About";
 import ReachOut from "../components/Organizer/ReachOut";
+import LiveEvents from "../components/Organizer/LiveEvents";
 
 const OrganizerPage = () => {
   return (
@@ -18,6 +19,7 @@ const OrganizerPage = () => {
       />
       <About />
       <ReachOut/>
+      <LiveEvents/>
     </div>
   );
 };
