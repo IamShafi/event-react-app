@@ -1,10 +1,10 @@
 import DesktopImage from "../../../public/image/organizer-bg-live-events-desktop.svg";
 import MobileImage from "../../../public/image/organizer-bg-live-events-mobile.svg";
 import Card1 from "../../../public/image/organizer_liveevent-card-1.svg";
-// import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
-// import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
+import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
+import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
 
-const LiveEventCard = () => {
+const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
   return (
     <div
       className="w-full max-w-[335px] md:max-w-[386px] h-[486px] md:h-[540px]"
@@ -16,7 +16,7 @@ const LiveEventCard = () => {
       }}
     >
       <div className="w-[335px] md:w-[386px] h-[232px] md:h-[273px]">
-        <img src={Card1} alt="card" className="w-full h-full object-cover" />
+        <img src={cardImage} alt="card" className="w-full h-full object-cover" />
       </div>
       <div className="bg-[#00000059] backdrop-blur-[44px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px] relative">
         <h1 className="font-inter font-[700] text-[16px] md:text-[18px] text-white uppercase mb-[25px]">
@@ -82,6 +82,7 @@ const LiveEventCard = () => {
 };
 
 const LiveEvents = () => {
+  const cardImages = [Card1, Card2, Card3];
   return (
     <div className="mt-[50px] md:mt-[80px] w-full max-w-[1440px] mx-auto">
       <section
@@ -118,9 +119,9 @@ const LiveEvents = () => {
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[50px] md:mb-[30px]">
             LIVE <span className="font-[700] font-aeonik">EVENTS</span>
           </h1>
-          <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
-            {[...Array(3)].map((_, index) => (
-              <LiveEventCard key={index} />
+          <div className="CardContainer overflow-hidden relative w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
+            {cardImages.map((img, index) => (
+              <LiveEventCard key={index} cardImage={img} />
             ))}
             <div className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer">
               <img
