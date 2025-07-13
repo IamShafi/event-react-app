@@ -1,7 +1,73 @@
-
 import PhoneIcon from "../../../public/icons/phone.svg";
 import EmailIcon from "../../../public/icons/email.svg";
 import LocationIcon from "../../../public/icons/location.svg";
+
+const Form = () => {
+  return (
+    <div
+      className="w-full max-w-[335px] md:max-w-[586px] min-h-[322px] p-[25px]"
+      style={{
+        border: "1px solid",
+        borderImageSource:
+          "linear-gradient(97.99deg, rgba(255, 255, 255, 0.3) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.3) 100.55%)",
+        borderImageSlice: 1,
+        background: "#FFFFFF1A",
+      }}
+    >
+      <form className="w-full flex flex-col gap-[25px]">
+        <div className="flex items-center gap-5">
+          {/* First name */}
+          <div className="w-full max-w-[258px]">
+            <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white mb-5">
+              First Name <span className="text-red-600">*</span>
+            </h1>
+            <input
+              type="text"
+              placeholder="Enter First Name"
+              className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none"
+            />
+          </div>
+          {/* last name */}
+          <div className="w-full max-w-[258px]">
+            <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white mb-5">
+              Last Name <span className="text-red-600">*</span>
+            </h1>
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none"
+            />
+          </div>
+        </div>
+        {/* Email */}
+        <div className="flex flex-col w-full gap-5">
+          <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white">
+            Email Address <span className="text-red-600">*</span>
+          </h1>
+          <input
+            type="email"
+            placeholder="Enter Email here..."
+            className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none"
+          />
+        </div>
+        {/* Textbox */}
+        <div className="flex flex-col w-full gap-5">
+          <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white">
+            Email Address <span className="text-red-600">*</span>
+          </h1>
+          <input
+            type="textarea"
+            placeholder="Enter Email here..."
+            className="w-full p-2 min-h-[99px] bg-[#FFFFFF1A] text-white focus:outline-none"
+          />
+        </div>
+        <button className="w-full flex items-center justify-center font-inter font-[700] text-[14px] md:text-[16px] leading-[24px] text-black bg-white p-[20px]">
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  );
+};
 
 const ReachOut = () => {
   return (
@@ -42,7 +108,7 @@ const ReachOut = () => {
           </div>
         </div>
         {/* 1 card */}
-        <div className="w-full max-w-[387px] flex items-center gap-[15px]">
+        <div className="w-full max-w-[387px] flex items-center gap-[15px] mb-[20px] md:mb-[45px]">
           <img src={LocationIcon} alt="icon" className="w-[50px] h-[50px]" />
           <div className="w-full flex flex-col gap-[13px]">
             <p className="font-inter font-[400] text-[14px]  leading-[100%] text-white uppercase">
@@ -53,9 +119,47 @@ const ReachOut = () => {
             </h1>
           </div>
         </div>
+        {/* Border  */}
+        <div className="border w-[335px] md:w-[500px] h-[89px] border-[#FFFFFF33] flex items-center justify-between  px-[18px] py-[18px] md:px-[26px] md:py-[20px]">
+          <h1 className="font-inter font-[700] md:text-[20px] md:leading-[25px] text-white w-full max-w-[158px] uppercase">
+            Follow us On Social Media
+          </h1>
+          {/* socials */}
+          <div className="w-full flex items-center justify-end md:gap-[15px]">
+            <img
+              src="/icons/facebook.svg"
+              alt="icon"
+              className="w-[48px] h-[48px]"
+            />
+            <img
+              src="/icons/instagram.svg"
+              alt="icon"
+              className="w-[48px] h-[48px]"
+            />
+            <img
+              src="/icons/youtube.svg"
+              alt="icon"
+              className="w-[48px] h-[48px]"
+            />
+          </div>
+        </div>
+        <div className="border w-[335px] md:w-[500px] h-[89px] border-[#FFFFFF33] flex items-center justify-center  px-[18px] py-[18px] md:px-[26px] md:py-[28px]">
+          <div className="flex items-center gap-[10px]">
+            <img
+              src="/logo/arrow-right.svg"
+              alt="icon"
+              className="w-[25px] h-[12px] invert"
+            />
+            <h1 className="font-inter font-[600] md:font-[800] text-[14px] md:text-[16px] leading-[26px] text-white uppercase">
+              View organiser's website
+            </h1>
+          </div>
+        </div>
       </div>
       {/* Right */}
-      <div className="w-full max-w-[342px] md:max-w-[586px]"></div>
+      <div className="w-full max-w-[342px] md:max-w-[586px]">
+        <Form />
+      </div>
     </div>
   );
 };
