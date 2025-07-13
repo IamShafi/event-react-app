@@ -14,20 +14,20 @@ const About = () => {
       >
         {/* Mobile Background image with opacity */}
         <div
-          className="absolute inset-0 md:hidden"
+          className="absolute inset-0 lg:hidden"
           style={{
             backgroundImage: `url('${MobileVenueImage}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.7,
-            height: "586px",
+            height: "640px",
           }}
         />
 
         {/* Desktop Background image with opacity */}
         <div
-          className="absolute inset-0 hidden md:block"
+          className="absolute inset-0 hidden lg:block"
           style={{
             backgroundImage: `url('${AboutImage}')`,
             backgroundSize: "cover",
@@ -40,11 +40,11 @@ const About = () => {
 
         {/* Content overlay */}
         <div
-          className="px-5 relative z-10 w-full flex flex-col md:flex-row gap-5 justify-between 
-        md:items-center md:gap-10  mt-12 md:mt-[40px] xl:pr-[145px] md:px-0"
+          className="w-full max-w-[1177px] mx-auto flex flex-col items-center lg:flex-row justify-between px-5 relative z-10  gap-5 md:gap-0   
+         lg:gap-10  mt-0 md:mt-[40px]"
         >
-          <div className="w-full max-w-[577px] flex flex-col  md:pl-[120px]">
-            <h1 className="text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
+          <div className="w-full max-w-[335px] md:max-w-[505px] flex flex-col">
+            <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-5 md:mb-[25px]">
               ABOUT <span className="font-[700] font-aeonik">PULSE EVENT</span>
             </h1>
             {/* Line */}
@@ -71,11 +71,11 @@ const About = () => {
               community.
             </p>
           </div>
-          <div className="w-[355px] h-[221px] md:w-[643px] md:h-[399px]">
+          <div className="w-[355px] h-[221px] lg:w-[643px] lg:h-[399px]">
             <img
               src={RightAboutImage}
               alt="about image"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain xl:object-cover"
             />
           </div>
         </div>

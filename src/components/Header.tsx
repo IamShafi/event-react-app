@@ -8,12 +8,17 @@ const Header = () => {
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         borderBottom: "1px solid",
-        borderImage: "linear-gradient(to right, #FFFFFF 0%, #FFFFFF 0%) 1",
+        borderImage: `linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.5) 20%,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 0.5) 80%,
+          rgba(255, 255, 255, 0) 100%
+        )`,
+        borderImageSlice: 1,
       }}
     >
-      {/* Background with blur and gradient */}
-      {/* <div className='absolute inset-0  bg-[#0000001A] bg-opacity-10 backdrop-blur-[44px] bg-gradient-to-b from-white/0 to-white/0'></div> */}
-
       {/* Content */}
       <div className="relative z-10">
         <Link to="/">
