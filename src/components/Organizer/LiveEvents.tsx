@@ -3,6 +3,7 @@ import MobileImage from "../../../public/image/organizer-bg-live-events-mobile.s
 import Card1 from "../../../public/image/organizer_liveevent-card-1.svg";
 import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
 import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
+import { useState } from "react";
 
 const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
   return (
@@ -83,6 +84,21 @@ const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
 
 const LiveEvents = () => {
   const cardImages = [Card1, Card2, Card3];
+  const [startIndex, setStartIndex] = useState(0);
+
+  // Helper to get 3 visible cards, wrapping around
+  const getVisibleCards = () => {
+    return [0, 1, 2].map((offset) => cardImages[(startIndex + offset) % cardImages.length]);
+  };
+
+  const handlePrev = () => {
+    setStartIndex((prev) => (prev - 1 + cardImages.length) % cardImages.length);
+  };
+
+  const handleNext = () => {
+    setStartIndex((prev) => (prev + 1) % cardImages.length);
+  };
+
   return (
     <div className="mt-[50px] md:mt-[80px] w-full max-w-[1440px] mx-auto">
       <section
@@ -119,18 +135,18 @@ const LiveEvents = () => {
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[50px] md:mb-[30px]">
             LIVE <span className="font-[700] font-aeonik">EVENTS</span>
           </h1>
-          <div className="CardContainer overflow-hidden relative w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
-            {cardImages.map((img, index) => (
+          <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
+            {getVisibleCards().map((img, index) => (
               <LiveEventCard key={index} cardImage={img} />
             ))}
-            <div className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer">
+            <div className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer" onClick={handlePrev}>
               <img
                 src="/icons/event-left-arrow.svg"
                 alt=""
                 className="w-[50px] h-[50px]"
               />
             </div>
-            <div className="absolute right-[-6%] top-[50%] hidden lg:block cursor-pointer">
+            <div className="absolute right-[-6%] top-[50%] hidden lg:block cursor-pointer" onClick={handleNext}>
               <img
                 src="/icons/event-right-arrow.svg"
                 alt=""
