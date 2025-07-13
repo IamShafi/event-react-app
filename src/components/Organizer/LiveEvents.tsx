@@ -1,8 +1,8 @@
 import DesktopImage from "../../../public/image/organizer-bg-live-events-desktop.svg";
 import MobileImage from "../../../public/image/organizer-bg-live-events-mobile.svg";
 import Card1 from "../../../public/image/organizer_liveevent-card-1.svg";
-import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
-import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
+// import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
+// import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
 
 const LiveEventCard = () => {
   return (
@@ -118,7 +118,7 @@ const LiveEvents = () => {
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[50px] md:mb-[30px]">
             LIVE <span className="font-[700] font-aeonik">EVENTS</span>
           </h1>
-          <div className="CardContainer relative w-full max-w-[1198px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
+          <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
             {[...Array(3)].map((_, index) => (
               <LiveEventCard key={index} />
             ))}

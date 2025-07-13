@@ -40,7 +40,7 @@ const About = () => {
 
         {/* Content overlay */}
         <div
-          className="w-full max-w-[1177px] mx-auto flex flex-col items-center lg:flex-row justify-between px-5 relative z-10  gap-5 md:gap-0   
+          className="w-full max-w-[1200px] mx-auto flex flex-col items-center lg:flex-row justify-between px-5 md:px-0 relative z-10  gap-5 md:gap-0   
          lg:gap-10  mt-0 md:mt-[40px]"
         >
           <div className="w-full max-w-[335px] md:max-w-[505px] flex flex-col">

@@ -145,7 +145,7 @@ const Form = () => {
 
 const ReachOut = () => {
   return (
-    <div className="w-full max-w-[1200px] mx-auto my-[60px] lg:my-[100px] px-[20px] flex flex-col lg:flex-row items-center justify-between gap-[20px] lg:gap-[67px]">
+    <div className="w-full max-w-[1200px] mx-auto my-[60px] lg:my-[100px] px-[20px] lg:px-0 flex flex-col lg:flex-row items-center justify-between gap-[20px] lg:gap-[67px]">
       <div className="w-full max-w-[342px] md:max-w-[547px]">
         <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-[#FFFFFF] uppercase mb-[25px]">
           REACH OUT <span className="font-[700] font-aeonik">TO US</span>
