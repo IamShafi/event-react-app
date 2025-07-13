@@ -11,6 +11,7 @@ import FeaturedSponsor from "./components/FeaturedSponsor";
 import SponsorCarousel from "./components/SponsorCarousel";
 import Footer from "./components/Footer";
 import BookingSuccessPage from "./pages/BookingSuccessPage";
+import OrganizerPage from "./pages/OrganizerPage";
 
 const HomeLayout = () => {
   return (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/booking-success",
     element: <BookingSuccessPage />,
+  },
+  {
+    path: "/organizer",
+    element: <OrganizerPage />,
   },
 ]);
 
