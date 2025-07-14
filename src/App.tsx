@@ -15,11 +15,11 @@ const router = createBrowserRouter([
     element: <BookingSuccessPage />,
   },
   {
-    path: "/organizer",
+    path: "/organizers",
     element: <OrganizerPage />,
   },
   {
-    path: "/event",
+    path: "/events",
     element: <EventPage />,
   },
 ]);

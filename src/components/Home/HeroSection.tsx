@@ -20,7 +20,7 @@ const Header = () => {
       }}
     >
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex items-center w-full max-w-[1200px] justify-between gap-4">
         <Link to="/">
           <img
             src="/logo/header-logo.svg"
@@ -28,6 +28,37 @@ const Header = () => {
             className="w-[82px] md:w-[112px] h-[43px] md:h-[59px]"
           />
         </Link>
+        <div className="w-full max-w-[674px] flex items-center justify-between gap-[50px]">
+          {/* links */}
+          <div className="w-full max-w-[283px] flex justify-between gap-[35px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white uppercase">
+            <Link to="/">Home</Link>
+            <Link to="/events">Events</Link>
+            <Link to="/organizers">Organizers</Link>
+          </div>
+          <div className="w-full max-w-[278px] flex-1 gap-[10px] flex items-center justify-end">
+            {/* input */}
+            <form
+              className="w-full h-[52px] flex items-center relative"
+              style={{
+                background: "#FFFFFF1A",
+                backdropFilter: "blur(44px)",
+                border: "1px solid",
+                borderImageSlice: 1,
+                borderImageSource:
+                  "linear-gradient(97.99deg, rgba(255, 255, 255, 0.8) -8.87%, rgba(255, 255, 255, 0) 17.27%, rgba(255, 255, 255, 0) 73.29%, rgba(255, 255, 255, 0.8) 100.55%)",
+              }}
+            >
+              <input
+                type="email"
+                placeholder="Search Events..."
+                className="flex-1 h-full pl-2 bg-transparent text-white placeholder:text-[#D1D1D1] font-inter text-[20px] outline-none border-none"
+                required
+              />
+              <img src="/icons/search.svg" alt="" className="w-[54px] h-[50px] absolute right-0 cursor-pointer" />
+            </form>
+            <img src="/icons/user.svg" alt="" className="w-[53px] h-[53px] cursor-pointer" />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -119,10 +150,10 @@ const HeroSection = () => {
         {/* Black Linear Gradient Overlay bg-gradient-to-b from-black/0 via-black/10 to-black/40*/}
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/40"
-        //   style={{
-        //     background:
-        //       "linear-gradient(360deg, #000000 16.61%, rgba(0, 0, 0, 0.6) 33.36%, rgba(0, 0, 0, 0) 51.94%)",
-        //   }}
+          //   style={{
+          //     background:
+          //       "linear-gradient(360deg, #000000 16.61%, rgba(0, 0, 0, 0.6) 33.36%, rgba(0, 0, 0, 0) 51.94%)",
+          //   }}
         ></div>
         {/* Content */}
         <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-10 md:mb-15 z-20">
