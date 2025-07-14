@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import EarlyAccess from "../components/Home/EarlyAccess";
 import HeroSection from "../components/Home/HeroSection";
 import WhyWhatzzon from "../components/Home/WhyWhatzzon";
 
@@ -7,6 +8,7 @@ const HomePage = () => {
     <>
       <HeroSection />
       <WhyWhatzzon />
+      <EarlyAccess/>
       <Footer />
     </>
   );

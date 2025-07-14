@@ -1,5 +1,3 @@
-import DesktopImage from "../../../public/image/organizer-bg-live-events-desktop.svg";
-import MobileImage from "../../../public/image/organizer-bg-live-events-mobile.svg";
 import Card1 from "../../../public/image/organizer_liveevent-card-1.svg";
 import Card2 from "../../../public/image/organizer_liveevent-card-2.svg";
 import Card3 from "../../../public/image/organizer_liveevent-card-3.svg";
@@ -17,7 +15,11 @@ const PastEventCard = ({ cardImage }: { cardImage: string }) => {
       }}
     >
       <div className="w-[335px] md:w-[386px] h-[232px] md:h-[273px]">
-        <img src={cardImage} alt="card" className="w-full h-full object-cover" />
+        <img
+          src={cardImage}
+          alt="card"
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="bg-[#FFFFFF1F] backdrop-blur-[44px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px] relative">
         <h1 className="font-inter font-[700] text-[16px] md:text-[18px] text-white uppercase mb-[25px]">
@@ -70,7 +72,9 @@ const PastEvents = () => {
 
   // Helper to get 3 visible cards, wrapping around
   const getVisibleCards = () => {
-    return [0, 1, 2].map((offset) => cardImages[(startIndex + offset) % cardImages.length]);
+    return [0, 1, 2].map(
+      (offset) => cardImages[(startIndex + offset) % cardImages.length]
+    );
   };
 
   const handlePrev = () => {
@@ -83,9 +87,7 @@ const PastEvents = () => {
 
   return (
     <div className="mt-[50px] md:mt-[80px] w-full max-w-[1440px] mx-auto">
-      <section
-        className="relative w-full flex items-center justify-center bg-black"
-      >
+      <section className="relative w-full flex items-center justify-center bg-black">
         {/* Content overlay */}
         <div className="w-full max-w-[1200px] flex flex-col items-center justify-center relative z-10 py-[50px] md:py-[80px]">
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[50px] md:mb-[30px]">
@@ -95,14 +97,20 @@ const PastEvents = () => {
             {getVisibleCards().map((img, index) => (
               <PastEventCard key={index} cardImage={img} />
             ))}
-            <div className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer" onClick={handlePrev}>
+            <div
+              className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer"
+              onClick={handlePrev}
+            >
               <img
                 src="/icons/event-left-arrow.svg"
                 alt=""
                 className="w-[50px] h-[50px]"
               />
             </div>
-            <div className="absolute right-[-6%] top-[50%] hidden lg:block cursor-pointer" onClick={handleNext}>
+            <div
+              className="absolute right-[-6%] top-[50%] hidden lg:block cursor-pointer"
+              onClick={handleNext}
+            >
               <img
                 src="/icons/event-right-arrow.svg"
                 alt=""
