@@ -160,12 +160,12 @@ const HeroSection = () => {
           <HeroInfoOverlay />
         </div>
         {/* Navigations */}
-        {/* <div className="flex flex-col gap-[5px] absolute top-[50%] right-[10%] transform translate-y-1/2">
+        <div className="flex flex-col gap-[5px] absolute top-[50%] right-[3%] transform translate-y-1/2">
           <div className="bg-[#FFFFFF80] w-[7px] h-[28px] rounded-[23.11px]"></div>
           <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
           <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
           <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
-        </div> */}
+        </div>
       </section>
     </div>
   );
