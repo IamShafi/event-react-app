@@ -123,7 +123,7 @@ const Form = () => {
             Message <span className="text-red-600">*</span>
           </h1>
           <textarea
-            placeholder="Enter your message..."
+            placeholder="Enter Message..."
             className="w-full px-2 py-[20px] min-h-[99px] bg-[#FFFFFF1A] text-white focus:outline-none align-top resize-none placeholder:align-top placeholder:text-[14px]"
             value={message}
             onChange={e => setMessage(e.target.value)}
@@ -134,7 +134,7 @@ const Form = () => {
         </div>
         <button
           type="submit"
-          className="cursor-pointer w-full flex items-center justify-center font-inter font-[700] text-[14px] md:text-[16px] leading-[24px] text-black bg-white p-[20px]"
+          className="cursor-pointer w-full flex items-center justify-center font-inter font-[700] text-[14px] md:text-[16px] leading-[24px] text-black bg-white p-[20px] h-[52px]"
         >
           SUBMIT
         </button>
@@ -217,7 +217,7 @@ const ReachOut = () => {
             />
           </div>
         </div>
-        <div className="border w-[335px] md:w-[500px] h-[89px] border-[#FFFFFF33] flex items-center justify-center  px-[18px] py-[18px] md:px-[26px] md:py-[28px]">
+        <div className="border w-[335px] md:w-[500px] h-[46px] md:h-[67px] border-[#FFFFFF33] flex items-center justify-center  px-[18px] py-[18px] md:px-[26px] md:py-[28px]">
           <div className="flex items-center gap-[10px]">
             <img
               src="/logo/arrow-right.svg"
