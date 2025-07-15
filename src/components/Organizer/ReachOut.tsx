@@ -66,8 +66,12 @@ const Form = () => {
         background: "#FFFFFF1A",
       }}
     >
-      <form className="w-full flex flex-col gap-[25px]" onSubmit={handleSubmit} noValidate>
-        <div className="flex flex-col md:flex-row md:items-center gap-5">
+      <form
+        className="w-full flex flex-col gap-[25px]"
+        onSubmit={handleSubmit}
+        noValidate
+      >
+        <div className="hidden md:flex flex-col md:flex-row md:items-center gap-5">
           {/* First name */}
           <div className="w-full max-w-[258px]">
             <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white mb-5">
@@ -78,7 +82,7 @@ const Form = () => {
               placeholder="Enter First Name"
               className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none placeholder:text-[14px]"
               value={firstName}
-              onChange={e => setFirstName(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
             />
             {errors.firstName && (
               <span className="text-red-500 text-xs">{errors.firstName}</span>
@@ -94,12 +98,29 @@ const Form = () => {
               placeholder="Enter Last Name"
               className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none placeholder:text-[14px]"
               value={lastName}
-              onChange={e => setLastName(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
             />
             {errors.lastName && (
               <span className="text-red-500 text-xs">{errors.lastName}</span>
             )}
           </div>
+        </div>
+        {/* Full Name */}
+        {/* First name */}
+        <div className="block md:hidden w-full">
+          <h1 className="font-inter font-[600] text-[16px] leading-[24px] text-white mb-5">
+            Full Name <span className="text-red-600">*</span>
+          </h1>
+          <input
+            type="text"
+            placeholder="Enter Full Name"
+            className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none placeholder:text-[14px]"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          {errors.firstName && (
+            <span className="text-red-500 text-xs">{errors.firstName}</span>
+          )}
         </div>
         {/* Email */}
         <div className="flex flex-col w-full gap-5">
@@ -111,7 +132,7 @@ const Form = () => {
             placeholder="Enter Email here..."
             className="w-full p-2 h-[53px] bg-[#FFFFFF1A] text-white focus:outline-none placeholder:text-[14px]"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           {errors.email && (
             <span className="text-red-500 text-xs">{errors.email}</span>
@@ -124,9 +145,9 @@ const Form = () => {
           </h1>
           <textarea
             placeholder="Enter Message..."
-            className="w-full px-2 py-[20px] min-h-[99px] bg-[#FFFFFF1A] text-white focus:outline-none align-top resize-none placeholder:align-top placeholder:text-[14px]"
+            className="w-full px-2 py-[20px] min-h-[80px] md:min-h-[99px] bg-[#FFFFFF1A] text-white focus:outline-none align-top resize-none placeholder:align-top placeholder:text-[14px]"
             value={message}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
           />
           {errors.message && (
             <span className="text-red-500 text-xs">{errors.message}</span>
@@ -194,7 +215,7 @@ const ReachOut = () => {
           </div>
         </div>
         {/* Border  */}
-        <div className="border w-[335px] md:w-[500px] h-[89px] border-[#FFFFFF33] flex items-center justify-between  px-[18px] py-[18px] md:px-[26px] md:py-[20px]">
+        <div className="border w-[335px] md:w-[500px] h-[89px] bg-[#FFFFFF1A] border-[#FFFFFF33] flex items-center justify-between  px-[18px] py-[18px] md:px-[26px] md:py-[20px]">
           <h1 className="font-inter font-[700] text-[16px] md:text-[20px] leading-[22px] md:leading-[25px] text-white w-full max-w-[158px] uppercase">
             Follow us On Social Media
           </h1>
@@ -217,7 +238,7 @@ const ReachOut = () => {
             />
           </div>
         </div>
-        <div className="border w-[335px] md:w-[500px] h-[46px] md:h-[67px] border-[#FFFFFF33] flex items-center justify-center  px-[18px] py-[18px] md:px-[26px] md:py-[28px]">
+        <div className="border w-[335px] md:w-[500px] h-[46px] md:h-[67px] bg-[#FFFFFF1A] border-[#FFFFFF33] flex items-center justify-center  px-[18px] py-[18px] md:px-[26px] md:py-[28px]">
           <div className="flex items-center gap-[10px]">
             <img
               src="/logo/arrow-right.svg"

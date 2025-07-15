@@ -89,14 +89,17 @@ const PastEvents = () => {
     <div className="mt-[50px] md:mt-[80px] w-full max-w-[1440px] mx-auto">
       <section className="relative w-full flex items-center justify-center bg-black">
         {/* Content overlay */}
-        <div className="w-full max-w-[1200px] flex flex-col items-center justify-center relative z-10 py-[50px] md:py-[80px]">
-          <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[50px] md:mb-[30px]">
+        <div className="w-full max-w-[1200px] flex flex-col items-center justify-center relative z-10 py-[0px] md:py-[80px]">
+          <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[30px] md:mb-[50px]">
             PAST <span className="font-[700] font-aeonik">EVENTS</span>
           </h1>
           <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-[44px] md:gap-[20px] pb-[50px] md:pb-[80px]">
             {getVisibleCards().map((img, index) => (
               <PastEventCard key={index} cardImage={img} />
             ))}
+            {/* Load More */}
+            <div className="cursor-pointer flex md:hidden font-inter font-[800] text-[16px] text-white uppercase items-center gap-2">Load More <img src="/icons/arrow-down.svg" alt="" className="w-[12px] h-[6px]"/></div>
+            {/* Arrows */}
             <div
               className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer"
               onClick={handlePrev}
