@@ -8,7 +8,7 @@ import Card7 from "../../../public/image/hero-whywhatzzon-card-7.svg";
 import Card8 from "../../../public/image/hero-whywhatzzon-card-8.svg";
 import DesktopImage from "../../../public/image/hero-whywhatzzon-bg.svg";
 import MobileImage from "../../../public/image/hero-whywhatzzon-bg-mobile.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const WhyWhatzzon = () => {
   const navigate = useNavigate();
