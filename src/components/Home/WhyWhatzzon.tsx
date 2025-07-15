@@ -8,9 +8,10 @@ import Card7 from "../../../public/image/hero-whywhatzzon-card-7.svg";
 import Card8 from "../../../public/image/hero-whywhatzzon-card-8.svg";
 import DesktopImage from "../../../public/image/hero-whywhatzzon-bg.svg";
 import MobileImage from "../../../public/image/hero-whywhatzzon-bg-mobile.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const WhyWhatzzon = () => {
+  const navigate = useNavigate();
   const DesktopCards = [Card1, Card2, Card3, Card4];
   const MobileCards = [Card5, Card6, Card7, Card8];
   return (
@@ -91,7 +92,7 @@ const WhyWhatzzon = () => {
                 />
                 <button
                   className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase bg-transparent border-none outline-none cursor-pointer"
-                  onClick={() => {}}
+                  onClick={() => navigate('/events')}
                 >
                   EXPLORE EVENTS
                 </button>

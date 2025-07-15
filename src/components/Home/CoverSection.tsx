@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HeroImage from "../../../public/image/home-hero-bg-desktop.svg";
 import MobileHeroImage from "../../../public/image/home-hero-bg-mobile.svg";
 import { useState, useRef, useEffect } from "react";
@@ -126,6 +126,8 @@ const Header = () => {
   );
 };
 const HeroInfoOverlay = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="relative w-full max-w-[335px] lg:max-w-[1200px] flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[60px]">
       {/* Heading */}
@@ -164,7 +166,7 @@ const HeroInfoOverlay = () => {
               />
               <button
                 className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase bg-transparent border-none outline-none cursor-pointer"
-                onClick={() => {}}
+                onClick={() => navigate('/events')}
               >
                 EXPLORE EVENTS
               </button>
