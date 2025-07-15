@@ -2,13 +2,25 @@ import Card1 from "../../../public/image/hero-whywhatzzon-card-1.svg";
 import Card2 from "../../../public/image/hero-whywhatzzon-card-2.svg";
 import Card3 from "../../../public/image/hero-whywhatzzon-card-3.svg";
 import Card4 from "../../../public/image/hero-whywhatzzon-card-4.svg";
+import Card5 from "../../../public/image/hero-whywhatzzon-card-5.svg";
+import Card6 from "../../../public/image/hero-whywhatzzon-card-6.svg";
+import Card7 from "../../../public/image/hero-whywhatzzon-card-7.svg";
+import Card8 from "../../../public/image/hero-whywhatzzon-card-8.svg";
 import DesktopImage from "../../../public/image/hero-whywhatzzon-bg.svg";
 import MobileImage from "../../../public/image/hero-whywhatzzon-bg-mobile.svg";
 
 const WhyWhatzzon = () => {
   const DesktopCards = [Card1, Card2, Card3, Card4];
+  const MobileCards = [Card5, Card6, Card7, Card8];
   return (
-    <div className="mt-[100px] w-full max-w-[1440px] mx-auto flex items-center justify-center">
+    <div className="mt-[100px] w-full max-w-[1440px] mx-auto flex items-center justify-center lg:border-t"
+    style={{
+      border: "1px solid",
+      borderImageSource:
+        "linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%)",
+      borderImageSlice: 1,
+    }}
+    >
       <section
         className="relative w-full "
         style={{
@@ -37,7 +49,7 @@ const WhyWhatzzon = () => {
           }}
         />
         {/* Content overlay */}
-        <div className="relative z-10 w-full max-w-[1200] flex flex-col items-center justify-center px-[20px] md:px-0  py-[80px] md:py-[50px]">
+        <div className="relative z-10 w-full max-w-[1200] flex flex-col items-center justify-center px-[20px] md:px-0  py-[50px] md:py-[80px]">
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[30px] lg:mb-[50px]">
             WHY <span className="font-[700] font-aeonik">WHATZZON?</span>
           </h1>
@@ -46,7 +58,18 @@ const WhyWhatzzon = () => {
           >
             {DesktopCards.map((card, index) => {
               return (
-                <div key={index}>
+                <div key={index} className="hidden sm:block">
+                  <img
+                    src={card}
+                    alt="icon"
+                    className="w-[335px] sm:w-[285px] h-[350px] sm:h-[438px]"
+                  />
+                </div>
+              );
+            })}
+            {MobileCards.map((card, index) => {
+              return (
+                <div key={index} className="block sm:hidden">
                   <img
                     src={card}
                     alt="icon"
@@ -57,7 +80,7 @@ const WhyWhatzzon = () => {
             })}
           </div>
           {/* Button */}
-          <div className="mt-[53px] w-full [@media(min-width:390px)]:max-w-[230px] h-[54px] bg-white p-[3px]">
+          <div className="mt-[30px] sm:mt-[53px] w-full [@media(min-width:390px)]:max-w-[230px] h-[54px] bg-white p-[3px]">
             <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
               <div className="flex items-center gap-[10px] py-[13px] lg:py-[24px]">
                 <img

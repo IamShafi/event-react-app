@@ -20,7 +20,7 @@ const Header = () => {
       }}
     >
       {/* Content */}
-      <div className="relative z-10 flex items-center w-full max-w-[1200px] justify-between gap-4">
+      <div className="relative z-10 flex items-center w-full max-w-[1200px] justify-between gap-4 px-[20px] md:px-0">
         <Link to="/">
           <img
             src="/logo/header-logo.svg"
@@ -28,9 +28,9 @@ const Header = () => {
             className="w-[82px] md:w-[112px] h-[43px] md:h-[59px]"
           />
         </Link>
-        <div className="w-full max-w-[674px] flex items-center justify-between gap-[50px]">
+        <div className="w-full max-w-[167px] md:max-w-[674px] flex items-center justify-between gap-[50px]">
           {/* links */}
-          <div className="w-full max-w-[283px] flex justify-between gap-[35px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white uppercase">
+          <div className="hidden md:flex w-full max-w-[283px] justify-between gap-[35px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white uppercase">
             <Link to="/">Home</Link>
             <Link to="/events">Events</Link>
             <Link to="/organizers">Organizers</Link>
@@ -38,7 +38,7 @@ const Header = () => {
           <div className="w-full max-w-[278px] flex-1 gap-[10px] flex items-center justify-end">
             {/* input */}
             <form
-              className="w-full h-[52px] flex items-center relative"
+              className="hidden md:flex w-full h-[52px] items-center relative"
               style={{
                 background: "#FFFFFF1A",
                 backdropFilter: "blur(44px)",
@@ -51,12 +51,27 @@ const Header = () => {
               <input
                 type="email"
                 placeholder="Search Events..."
-                className="flex-1 h-full pl-2 bg-transparent text-white placeholder:text-[#D1D1D1] font-inter text-[20px] outline-none border-none"
+                className=" flex-1 h-full pl-2 bg-transparent text-white placeholder:text-[#D1D1D1] font-inter text-[20px] outline-none border-none"
                 required
               />
-              <img src="/icons/search.svg" alt="" className="w-[54px] h-[50px] absolute right-0 cursor-pointer" />
+              <img
+                src="/icons/search.svg"
+                alt=""
+                className="w-[35px] h-[35px] md:w-[54px] md:h-[50px] absolute right-0 cursor-pointer"
+              />
             </form>
-            <img src="/icons/user.svg" alt="" className="w-[53px] h-[53px] cursor-pointer" />
+            {/* mobile search */}
+            <img src="/icons/search.svg" alt="" className="block md:hidden w-[38px] h-[38px] md:w-[54px] md:h-[50px] cursor-pointer" />
+            <img
+              src="/icons/user.svg"
+              alt=""
+              className="w-[35px] h-[35px] md:w-[53px] md:h-[53px] cursor-pointer"
+            />
+            <img
+              src="/image/menu-hamburger.svg"
+              alt=""
+              className="w-[35px] h-[35px] cursor-pointer block md:hidden"
+            />
           </div>
         </div>
       </div>
@@ -156,11 +171,11 @@ const HeroSection = () => {
           //   }}
         ></div>
         {/* Content */}
-        <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-10 md:mb-15 z-20">
+        <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-0 md:mb-15 z-20">
           <HeroInfoOverlay />
         </div>
         {/* Navigations */}
-        <div className="flex flex-col gap-[5px] absolute top-[50%] right-[3%] transform translate-y-1/2">
+        <div className="flex flex-col gap-[5px] absolute top-[40%] md:top-[50%] right-[3%] transform translate-y-1/2">
           <div className="bg-[#FFFFFF80] w-[7px] h-[28px] rounded-[23.11px]"></div>
           <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
           <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
