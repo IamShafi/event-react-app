@@ -5,7 +5,7 @@ const EarlyAccess = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center">
       <section
-        className="relative w-full flex items-center justify-center pb-[460px] md:pb-[600px]"
+        className="relative w-full flex items-center justify-center pb-[460px] md:pb-[45px]"
         style={{
           backgroundColor: "#000000B2",
         }}

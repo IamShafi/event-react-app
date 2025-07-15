@@ -1,10 +1,26 @@
 import { Link } from "react-router-dom";
 import HeroImage from "../../../public/image/home-hero-bg-desktop.svg";
 import MobileHeroImage from "../../../public/image/home-hero-bg-mobile.svg";
+import { useState, useRef, useEffect } from "react";
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu on outside click
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [mobileMenuOpen]);
+
   return (
     <div
-      className="fixed top-0 z-50 backdrop-blur-[44px] w-full h-[71px] md:h-[95px] mx-auto flex items-center justify-center"
+      className="fixed top-0 z-50 sm:backdrop-blur-[44px] w-full h-[71px] md:h-[95px] mx-auto flex items-center justify-center"
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         borderBottom: "1px solid",
@@ -67,14 +83,45 @@ const Header = () => {
               alt=""
               className="w-[35px] h-[35px] md:w-[53px] md:h-[53px] cursor-pointer"
             />
+            {/* mobile menu */}
             <img
               src="/image/menu-hamburger.svg"
               alt=""
               className="w-[35px] h-[35px] cursor-pointer block md:hidden"
+              onClick={() => setMobileMenuOpen(true)}
             />
           </div>
         </div>
       </div>
+      {/* Mobile Menu Drawer */}
+      {mobileMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-[2px] sm:hidden" />
+          {/* Drawer */}
+          <div
+            ref={menuRef}
+            className="mobileMenu bg-black fixed top-0 right-0 z-50 h-full w-[90vw] max-w-[360px] shadow-lg flex flex-col p-6 gap-8 sm:hidden animate-slide-in"
+            style={{ transition: 'transform 0.3s', }}
+          >
+            <div className="flex justify-between items-center mb-6">
+              <img src="/logo/header-logo.svg" alt="logo" className="w-[82px] h-[43px]" />
+              <button
+                className="text-white text-3xl font-bold focus:outline-none"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                &times;
+              </button>
+            </div>
+            <nav className="flex flex-col gap-6 text-white text-lg font-inter uppercase bg-black/80">
+              <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+              <Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link>
+              <Link to="/organizers" onClick={() => setMobileMenuOpen(false)}>Organizers</Link>
+            </nav>
+          </div>
+        </>
+      )}
     </div>
   );
 };

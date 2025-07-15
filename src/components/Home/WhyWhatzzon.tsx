@@ -8,6 +8,7 @@ import Card7 from "../../../public/image/hero-whywhatzzon-card-7.svg";
 import Card8 from "../../../public/image/hero-whywhatzzon-card-8.svg";
 import DesktopImage from "../../../public/image/hero-whywhatzzon-bg.svg";
 import MobileImage from "../../../public/image/hero-whywhatzzon-bg-mobile.svg";
+import { Link } from "react-router-dom";
 
 const WhyWhatzzon = () => {
   const DesktopCards = [Card1, Card2, Card3, Card4];
@@ -49,7 +50,7 @@ const WhyWhatzzon = () => {
           }}
         />
         {/* Content overlay */}
-        <div className="relative z-10 w-full max-w-[1200] flex flex-col items-center justify-center px-[20px] md:px-0  py-[50px] md:py-[80px]">
+        <div className="relative z-10 w-full max-w-[1200] flex flex-col items-center justify-center px-[20px] md:px-0  py-[50px] md:py-[60px]">
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[30px] lg:mb-[50px]">
             WHY <span className="font-[700] font-aeonik">WHATZZON?</span>
           </h1>
