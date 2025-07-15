@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import EarlyAccess from "../components/Home/EarlyAccess";
-import HeroSection from "../components/Home/HeroSection";
+import HeroSection from "../components/Home/CoverSection";
 import WhyWhatzzon from "../components/Home/WhyWhatzzon";
 
 const HomePage = () => {

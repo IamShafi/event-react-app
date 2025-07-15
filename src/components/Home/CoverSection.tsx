@@ -128,7 +128,7 @@ const HeroInfoOverlay = () => {
     </div>
   );
 };
-const HeroSection = () => {
+const CoverSection = () => {
   return (
     <div className="w-full mx-auto relative">
       <Header />
@@ -186,4 +186,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default CoverSection;
