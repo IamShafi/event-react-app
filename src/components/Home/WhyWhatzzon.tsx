@@ -10,9 +10,46 @@ import DesktopImage from "../../../public/image/hero-whywhatzzon-bg.svg";
 import MobileImage from "../../../public/image/hero-whywhatzzon-bg-mobile.svg";
 import { useNavigate } from "react-router-dom";
 
+// Card component for WhyWhatzzon section
+const WhyWhatzzonCard = ({ img, title, description }: { img: string; title: string; description: string }) => (
+  <div className="hidden sm:block relative">
+    <img
+      src={img}
+      alt="icon"
+      className="w-[335px] sm:w-[285px] h-[350px] sm:h-[438px]"
+    />
+    <div className="absolute top-[80%] left-[50%] translate-x-[-50%] w-[190px] flex flex-col text-center items-center">
+      <h1 className="font-inter font-[700] text-[18px] leading-[28px] text-white">{title}</h1>
+      <p className="font-inter font-[400] text-[14px] lg:text-[16px] leading-[22px] text-white">{description}</p>
+    </div>
+  </div>
+);
+
 const WhyWhatzzon = () => {
   const navigate = useNavigate();
-  const DesktopCards = [Card1, Card2, Card3, Card4];
+  // Card data for Desktop
+  const DesktopCardData = [
+    {
+      img: Card1,
+      title: "Seamless Booking",
+      description: "Buy tickets instantly, no hassle.",
+    },
+    {
+      img: Card2,
+      title: "Local Discoveries",
+      description: "Find events happening around you — fast.",
+    },
+    {
+      img: Card3,
+      title: "Visual Previews",
+      description: "Watch, scroll, feel the vibe before you book.",
+    },
+    {
+      img: Card4,
+      title: "Curated Schedules",
+      description: "Stay ahead of what’s trending and what’s next.",
+    },
+  ];
   const MobileCards = [Card5, Card6, Card7, Card8];
   return (
     <div
@@ -59,17 +96,14 @@ const WhyWhatzzon = () => {
           <div
             className={`w-full flex flex-wrap items-center justify-center gap-[15px] lg:gap-[20px]`}
           >
-            {DesktopCards.map((card, index) => {
-              return (
-                <div key={index} className="hidden sm:block">
-                  <img
-                    src={card}
-                    alt="icon"
-                    className="w-[335px] sm:w-[285px] h-[350px] sm:h-[438px]"
-                  />
-                </div>
-              );
-            })}
+            {DesktopCardData.map((card, index) => (
+              <WhyWhatzzonCard
+                key={index}
+                img={card.img}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
             {MobileCards.map((card, index) => {
               return (
                 <div key={index} className="block sm:hidden">
