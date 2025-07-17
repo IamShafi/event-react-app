@@ -121,7 +121,7 @@ const WhyWhatzzon = () => {
           {/* Button */}
           <div className="mt-[30px] sm:mt-[53px] w-full [@media(min-width:390px)]:max-w-[230px] h-[54px] bg-white p-[3px]">
             <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-              <div className="flex items-center gap-[10px] py-[13px] lg:py-[24px] group">
+              <div className="w-full max-w-[226px] flex justify-center items-center gap-[10px] py-[13px] lg:py-[24px] group">
                 <img
                   src="/logo/arrow-right.svg"
                   alt=""

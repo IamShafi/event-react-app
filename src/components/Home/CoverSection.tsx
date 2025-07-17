@@ -176,9 +176,9 @@ const HeroInfoOverlay = () => {
           all in one place.
         </p>
         {/* Button */}
-        <div className="w-full lg:max-w-[336px] h-[54px] lg:h-[60px] bg-white p-[3px]">
+        <div className="w-full lg:max-w-[226px] h-[54px] lg:h-[60px] bg-white p-[3px]">
           <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-            <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px] group">
+            <div className="w-full flex justify-center items-center gap-[10px] py-[13px] lg:py-[24px] group">
               <img
                 src="/logo/arrow-right.svg"
                 alt=""
