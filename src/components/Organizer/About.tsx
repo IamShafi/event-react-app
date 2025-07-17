@@ -21,7 +21,7 @@ const About = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.7,
-            height: "640px",
+            height: "554px",
           }}
         />
 

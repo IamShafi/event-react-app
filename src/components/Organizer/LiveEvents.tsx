@@ -171,7 +171,7 @@ const LiveEvents = () => {
           <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-white uppercase mb-[30px] md:mb-[50px]">
             LIVE <span className="font-[700] font-aeonik">EVENTS</span>
           </h1>
-          <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-[44px] lg:gap-[20px] pb-[0px] md:pb-[80px]">
+          <div className="CardContainer relative w-full max-w-[1200px] flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-[44px] lg:gap-[20px]">
             {getVisibleCards().map((img, index) => (
               <LiveEventCard key={index} cardImage={img} />
             ))}
