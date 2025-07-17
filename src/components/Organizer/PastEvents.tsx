@@ -57,7 +57,7 @@ const PastEventCard = ({ cardImage }: { cardImage: string }) => {
             July 27, 2025
           </p>
         </div>
-        <p className="font-inter font-[400] text-[14px] md:text-[16px] leading-[24px] text-white pb-[25px]">
+        <p className="font-inter font-[400] text-[14px] md:text-[16px] leading-[24px] text-white pb-[25px]" style={{ color: 'rgba(255,255,255,0.80)' }}>
           A late-night DJ-led journey through beats, visuals, and underground
           vibes.
         </p>

@@ -58,14 +58,14 @@ const About = () => {
                 borderImageSlice: 1,
               }}
             ></div>
-            <p className="text-[16px] font-inter font-[400] leading-[24px] text-white mb-6 md:mb-[25px]">
+            <p className="text-[14px] md:text-[16px] font-inter font-[400] leading-[20px] md:leading-[24px] mb-6 md:mb-[25px]" style={{ color: 'rgba(255,255,255,0.80)' }}>
               Pulse Events is a creative collective focused on bringing
               immersive concerts, cultural shows, and art-driven experiences to
               life. With a track record of hosting genre-defying acts and
               unforgettable nights, we believe in connecting people through
               sound, light, and shared moments.
             </p>
-            <p className="text-[16px] font-inter font-[400] leading-[24px] text-white md:mb-[35px]">
+            <p className="text-[14px] md:text-[16px] font-inter font-[400] leading-[20px] md:leading-[24px] md:mb-[35px]" style={{ color: 'rgba(255,255,255,0.80)' }}>
               Whether it’s a rooftop jazz session or an underground electronic
               rave, Pulse curates each event to spark emotion and inspire
               community.

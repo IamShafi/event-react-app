@@ -171,7 +171,8 @@ const ReachOut = () => {
         <h1 className="text-[26px] md:text-[42px] font-aeonik font-normal leading-[65px] text-[#FFFFFF] uppercase mb-[25px]">
           REACH OUT <span className="font-[700] font-aeonik">TO US</span>
         </h1>
-        <p className="font-inter font-[400] text-[14px] lg:text-[16px]  leading-[20px] lg:leading-[24px] text-white mb-[25px] lg:mb-[45px]">
+        <p className="font-inter font-[400] text-[14px] lg:text-[16px]  leading-[20px] lg:leading-[24px] text-white mb-[25px] lg:mb-[45px]"
+        style={{ color: 'rgba(255,255,255,0.80)' }}>
           We’d love to hear from you. Whether it’s a question, idea, or
           collaboration — drop us a message anytime.
         </p>
