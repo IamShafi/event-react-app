@@ -47,9 +47,9 @@ const Header = () => {
         <div className="w-full max-w-[167px] md:max-w-[674px] flex items-center justify-between gap-[50px]">
           {/* links */}
           <div className="hidden md:flex w-full max-w-[283px] justify-between gap-[35px] items-center font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
-            <Link to="/">Home</Link>
-            <Link to="/events">Events</Link>
-            <Link to="/organizers">Organizers</Link>
+            <Link to="/"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Home</h1></Link>
+            <Link to="/events"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Events</h1></Link>
+            <Link to="/organizers"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Organizers</h1></Link>
           </div>
           <div className="w-full max-w-[278px] flex-1 gap-[10px] flex items-center justify-end">
             {/* input */}
