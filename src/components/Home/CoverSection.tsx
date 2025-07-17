@@ -1,5 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import HeroImage from "../../../public/image/home-hero-bg-desktop.svg";
+import HeroImage1 from "../../../public/image/home-hero-bg-desktop-1.svg";
+import HeroImage2 from "../../../public/image/home-hero-bg-desktop-2.svg";
+import HeroImage3 from "../../../public/image/home-hero-bg-desktop-3.svg";
 import MobileHeroImage from "../../../public/image/home-hero-bg-mobile.svg";
 import { useState, useRef, useEffect } from "react";
 const Header = () => {
@@ -209,6 +212,27 @@ const HeroInfoOverlay = () => {
   );
 };
 const CoverSection = () => {
+  // Carousel state
+  const heroImages = [HeroImage, HeroImage1, HeroImage2, HeroImage3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // For zoom animation toggle
+  const [zoomIn, setZoomIn] = useState(true);
+
+  // Carousel auto-play effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+      setZoomIn((prev) => !prev); // Toggle zoom direction for effect
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  // Optional: manual navigation
+  // const handleNavClick = (idx: number) => {
+  //   setCurrentIndex(idx);
+  //   setZoomIn((prev) => !prev); // Toggle zoom for manual change
+  // };
+
   return (
     <div className="w-full mx-auto relative">
       <Header />
@@ -223,16 +247,30 @@ const CoverSection = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Desktop Background Image */}
+        {/* Desktop Background Image - Carousel */}
         <div
-          className="absolute inset-0 hidden md:block"
-          style={{
-            backgroundImage: `url('${HeroImage}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+          className="absolute inset-0 hidden md:block overflow-hidden"
+        >
+          {heroImages.map((img, idx) => (
+            <img
+              key={img}
+              src={img}
+              alt="hero-bg"
+              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-700 ${
+                idx === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+              } transition-transform duration-[3800ms] ease-in-out ${
+                idx === currentIndex
+                  ? zoomIn
+                    ? "scale-110"
+                    : "scale-100"
+                  : "scale-100"
+              }`}
+              style={{
+                transitionProperty: "opacity, transform",
+              }}
+            />
+          ))}
+        </div>
         {/* Noise Overlay */}
         <div
           className="absolute inset-0"
@@ -245,22 +283,25 @@ const CoverSection = () => {
         {/* Black Linear Gradient Overlay bg-gradient-to-b from-black/0 via-black/10 to-black/40*/}
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/40"
-          //   style={{
-          //     background:
-          //       "linear-gradient(360deg, #000000 16.61%, rgba(0, 0, 0, 0.6) 33.36%, rgba(0, 0, 0, 0) 51.94%)",
-          //   }}
         ></div>
         {/* Content */}
         <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-0 z-20">
           <HeroInfoOverlay />
         </div>
         {/* Navigations */}
-        <div className="flex flex-col gap-[5px] absolute top-[40%] md:top-[50%] right-[3%] transform translate-y-1/2">
-          <div className="bg-[#FFFFFF80] w-[7px] h-[28px] rounded-[23.11px]"></div>
-          <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
-          <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
-          <div className="bg-[#FFFFFF80] w-[7px] h-[7px] rounded-full"></div>
-        </div>
+        {/* <div className="flex flex-col gap-[5px] absolute top-[40%] md:top-[50%] right-[3%] transform translate-y-1/2 z-30">
+          {heroImages.map((_, idx) => (
+            <div
+              key={idx}
+              onClick={() => handleNavClick(idx)}
+              className={`bg-[#FFFFFF80] w-[7px] cursor-pointer transition-all duration-300 ${
+                idx === currentIndex
+                  ? "h-[28px] rounded-[23.11px]"
+                  : "h-[7px] rounded-full"
+              }`}
+            ></div>
+          ))}
+        </div> */}
       </section>
     </div>
   );
