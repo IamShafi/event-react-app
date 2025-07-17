@@ -15,13 +15,14 @@ const WhyWhatzzon = () => {
   const DesktopCards = [Card1, Card2, Card3, Card4];
   const MobileCards = [Card5, Card6, Card7, Card8];
   return (
-    <div className="mt-[100px] w-full max-w-[1440px] mx-auto flex items-center justify-center lg:border-t"
-    style={{
-      border: "1px solid",
-      borderImageSource:
-        "linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%)",
-      borderImageSlice: 1,
-    }}
+    <div
+      className="mt-[100px] w-full max-w-[1440px] mx-auto flex items-center justify-center lg:border-t"
+      style={{
+        border: "1px solid",
+        borderImageSource:
+          "linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%)",
+        borderImageSlice: 1,
+      }}
     >
       <section
         className="relative w-full "
@@ -84,15 +85,25 @@ const WhyWhatzzon = () => {
           {/* Button */}
           <div className="mt-[30px] sm:mt-[53px] w-full [@media(min-width:390px)]:max-w-[230px] h-[54px] bg-white p-[3px]">
             <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-              <div className="flex items-center gap-[10px] py-[13px] lg:py-[24px]">
+              <div className="flex items-center gap-[10px] py-[13px] lg:py-[24px] group">
                 <img
                   src="/logo/arrow-right.svg"
                   alt=""
-                  className="w-[25px] h-[12px]"
+                  className="w-[25px] h-[12px]
+                  group-hover:order-2
+                  group-hover:translate-x-[0px] group-hover:ml-0
+                  order-1"
+                  style={{ willChange: "transform" }}
                 />
                 <button
-                  className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase bg-transparent border-none outline-none cursor-pointer"
-                  onClick={() => navigate('/events')}
+                  className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase 
+                  bg-transparent border-none outline-none cursor-pointer
+                  transition-all duration-500
+                  group-hover:order-1
+                  group-hover:-translate-x-[5px]
+                  order-2"
+                  style={{ willChange: "transform" }}
+                  onClick={() => navigate("/events")}
                 >
                   EXPLORE EVENTS
                 </button>

@@ -47,9 +47,21 @@ const Header = () => {
         <div className="w-full max-w-[167px] md:max-w-[674px] flex items-center justify-between gap-[50px]">
           {/* links */}
           <div className="hidden md:flex w-full max-w-[283px] justify-between gap-[35px] items-center font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
-            <Link to="/"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Home</h1></Link>
-            <Link to="/events"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Events</h1></Link>
-            <Link to="/organizers"><h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">Organizers</h1></Link>
+            <Link to="/">
+              <h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
+                Home
+              </h1>
+            </Link>
+            <Link to="/events">
+              <h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
+                Events
+              </h1>
+            </Link>
+            <Link to="/organizers">
+              <h1 className="font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
+                Organizers
+              </h1>
+            </Link>
           </div>
           <div className="w-full max-w-[278px] flex-1 gap-[10px] flex items-center justify-end">
             {/* input */}
@@ -77,7 +89,11 @@ const Header = () => {
               />
             </form>
             {/* mobile search */}
-            <img src="/icons/search.svg" alt="" className="block md:hidden w-[38px] h-[38px] md:w-[54px] md:h-[50px] cursor-pointer" />
+            <img
+              src="/icons/search.svg"
+              alt=""
+              className="block md:hidden w-[38px] h-[38px] md:w-[54px] md:h-[50px] cursor-pointer"
+            />
             <img
               src="/icons/user.svg"
               alt=""
@@ -102,10 +118,14 @@ const Header = () => {
           <div
             ref={menuRef}
             className="mobileMenu bg-black fixed top-0 right-0 z-50 h-full w-[90vw] max-w-[360px] shadow-lg flex flex-col p-6 gap-8 sm:hidden animate-slide-in"
-            style={{ transition: 'transform 0.3s', }}
+            style={{ transition: "transform 0.3s" }}
           >
             <div className="flex justify-between items-center mb-6">
-              <img src="/logo/header-logo.svg" alt="logo" className="w-[82px] h-[43px]" />
+              <img
+                src="/logo/header-logo.svg"
+                alt="logo"
+                className="w-[82px] h-[43px]"
+              />
               <button
                 className="text-white text-3xl font-bold focus:outline-none"
                 onClick={() => setMobileMenuOpen(false)}
@@ -115,9 +135,15 @@ const Header = () => {
               </button>
             </div>
             <nav className="flex flex-col gap-6 text-white md:text-lg font-inter font-[400] text-[16px] uppercase bg-black/80">
-              <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-              <Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link>
-              <Link to="/organizers" onClick={() => setMobileMenuOpen(false)}>Organizers</Link>
+              <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+              <Link to="/events" onClick={() => setMobileMenuOpen(false)}>
+                Events
+              </Link>
+              <Link to="/organizers" onClick={() => setMobileMenuOpen(false)}>
+                Organizers
+              </Link>
             </nav>
           </div>
         </>
@@ -127,7 +153,7 @@ const Header = () => {
 };
 const HeroInfoOverlay = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="relative w-full max-w-[335px] lg:max-w-[1200px] flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[60px] md:mb-[90px]">
       {/* Heading */}
@@ -158,15 +184,26 @@ const HeroInfoOverlay = () => {
         {/* Button */}
         <div className="w-full lg:max-w-[336px] h-[54px] lg:h-[60px] bg-white p-[3px]">
           <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-            <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px]">
+            <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px] group">
               <img
                 src="/logo/arrow-right.svg"
                 alt=""
-                className="w-[25px] h-[12px]"
+                className="w-[25px] h-[12px]
+                transition-all duration-500
+                  group-hover:order-2
+                  group-hover:translate-x-[0px] group-hover:ml-0
+                  order-1"
+                style={{ willChange: "transform" }}
               />
               <button
-                className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase bg-transparent border-none outline-none cursor-pointer"
-                onClick={() => navigate('/events')}
+                className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase 
+                bg-transparent border-none outline-none cursor-pointer
+                transition-all duration-500
+                  group-hover:order-1
+                  group-hover:-translate-x-[5px]
+                  order-2"
+                style={{ willChange: "transform" }}
+                onClick={() => navigate("/events")}
               >
                 EXPLORE EVENTS
               </button>

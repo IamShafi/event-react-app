@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
       </div>
       {/* footer bottom 2*/}
-      <div className="w-full max-w-[1193px] flex flex-col lg:flex-row gap-4 items-center justify-between lg:gap-[52px] lg:mt-[37px] mt-[50px] md:mt-0 mb-9 lg:mb-0">
+      <div className="w-full max-w-[1193px] flex flex-col lg:flex-row gap-4 items-center justify-between lg:gap-[52px] lg:mt-[37px] mt-[50px]  mb-9 lg:mb-0">
         <p className="hidden lg:block font-inter text-[14px] md:text-[16px] font-[400] leading-[22px] md:leading-[24px] text-white">
           Copyright © 2010-2025 Whatzzon. All rights reserved.
         </p>
