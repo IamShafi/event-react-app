@@ -46,7 +46,7 @@ const Header = () => {
         </Link>
         <div className="w-full max-w-[167px] md:max-w-[674px] flex items-center justify-between gap-[50px]">
           {/* links */}
-          <div className="hidden md:flex w-full max-w-[283px] justify-between gap-[35px] items-center font-normal font-inter text-[14px] lg:text-[16px] text-white uppercase">
+          <div className="hidden md:flex w-full max-w-[283px] justify-between gap-[35px] items-center font-[400] font-inter text-[14px] lg:text-[16px] text-white leading-[100%] uppercase">
             <Link to="/">Home</Link>
             <Link to="/events">Events</Link>
             <Link to="/organizers">Organizers</Link>
@@ -114,7 +114,7 @@ const Header = () => {
                 &times;
               </button>
             </div>
-            <nav className="flex flex-col gap-6 text-white text-lg font-inter uppercase bg-black/80">
+            <nav className="flex flex-col gap-6 text-white md:text-lg font-inter font-[400] text-[16px] uppercase bg-black/80">
               <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
               <Link to="/events" onClick={() => setMobileMenuOpen(false)}>Events</Link>
               <Link to="/organizers" onClick={() => setMobileMenuOpen(false)}>Organizers</Link>
