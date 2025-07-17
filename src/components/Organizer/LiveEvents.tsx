@@ -8,7 +8,7 @@ import { useState } from "react";
 const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
   return (
     <div
-      className="w-full max-w-[335px] md:max-w-[386px] min-h-[486px] md:min-h-[540px]"
+      className="group w-full max-w-[335px] md:max-w-[386px] min-h-[486px] md:min-h-[540px]"
       style={{
         border: "1px solid",
         borderImageSource:
@@ -16,11 +16,11 @@ const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
         borderImageSlice: 1,
       }}
     >
-      <div className="w-[335px] md:w-[386px] h-[232px] md:h-[273px]">
+      <div className="overflow-hidden w-[335px] md:w-[386px] h-[232px] md:h-[273px]">
         <img
           src={cardImage}
           alt="card"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-trasnform duration-500 group-hover:scale-150"
         />
       </div>
       <div className="bg-[#00000059] backdrop-blur-[44px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px] relative">
