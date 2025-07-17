@@ -57,7 +57,10 @@ const PastEventCard = ({ cardImage }: { cardImage: string }) => {
             July 27, 2025
           </p>
         </div>
-        <p className="font-inter font-[400] text-[14px] md:text-[16px] leading-[24px] text-white pb-[25px]" style={{ color: 'rgba(255,255,255,0.80)' }}>
+        <p
+          className="font-inter font-[400] text-[14px] md:text-[16px] leading-[24px] text-white pb-[25px]"
+          style={{ color: "rgba(255,255,255,0.80)" }}
+        >
           A late-night DJ-led journey through beats, visuals, and underground
           vibes.
         </p>
@@ -67,14 +70,26 @@ const PastEventCard = ({ cardImage }: { cardImage: string }) => {
 };
 
 const PastEvents = () => {
-  const cardImages = [Card1, Card2, Card3];
+  const cardImages = [Card1, Card2, Card3, Card1, Card2, Card3];
   const [startIndex, setStartIndex] = useState(0);
-
+  const [showMoreMobile, setShowMoreMobile] = useState(false);
   // Helper to get 3 visible cards, wrapping around
   const getVisibleCards = () => {
-    return [0, 1, 2].map(
+    const visible = [0, 1, 2].map(
       (offset) => cardImages[(startIndex + offset) % cardImages.length]
     );
+
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth < 768 &&
+      showMoreMobile
+    ) {
+      // For mobile, show 3 more
+      const nextSet = [3, 4, 5].map((i) => cardImages[i]);
+      return visible.concat(nextSet);
+    }
+
+    return visible;
   };
 
   const handlePrev = () => {
@@ -97,9 +112,22 @@ const PastEvents = () => {
             {getVisibleCards().map((img, index) => (
               <PastEventCard key={index} cardImage={img} />
             ))}
-            {/* Load More */}
-            <div className="cursor-pointer flex md:hidden font-inter font-[800] text-[16px] text-white uppercase items-center gap-2">Load More <img src="/icons/arrow-down.svg" alt="" className="w-[12px] h-[6px]"/></div>
-            {/* Arrows */}
+            {/* Load More on Mobile */}
+            {!showMoreMobile && (
+              <div
+                className="cursor-pointer flex md:hidden font-inter font-[800] text-[16px] text-white uppercase items-center gap-2"
+                onClick={() => setShowMoreMobile(true)}
+              >
+                Load More
+                <img
+                  src="/icons/arrow-down.svg"
+                  alt=""
+                  className="w-[12px] h-[6px]"
+                />
+              </div>
+            )}
+
+            {/* Desktop Arrows */}
             <div
               className="absolute left-[-6%] top-[50%] hidden lg:block cursor-pointer"
               onClick={handlePrev}
