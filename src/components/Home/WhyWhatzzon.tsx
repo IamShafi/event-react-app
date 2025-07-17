@@ -50,7 +50,7 @@ const WhyWhatzzon = () => {
       description: "Stay ahead of what’s trending and what’s next.",
     },
   ];
-  const MobileCards = [Card5, Card6, Card7, Card8];
+  const MobileCardImages = [Card5, Card6, Card7, Card8];
   return (
     <div
       className="mt-[100px] w-full max-w-[1440px] mx-auto flex items-center justify-center lg:border-t"
@@ -98,23 +98,25 @@ const WhyWhatzzon = () => {
           >
             {DesktopCardData.map((card, index) => (
               <WhyWhatzzonCard
-                key={index}
+                key={"desktop-" + index}
                 img={card.img}
                 title={card.title}
                 description={card.description}
               />
             ))}
-            {MobileCards.map((card, index) => {
-              return (
-                <div key={index} className="block sm:hidden">
-                  <img
-                    src={card}
-                    alt="icon"
-                    className="w-[335px] sm:w-[285px] h-[350px] sm:h-[438px]"
-                  />
+            {DesktopCardData.map((card, index) => (
+              <div key={"mobile-" + index} className="block sm:hidden relative">
+                <img
+                  src={MobileCardImages[index]}
+                  alt="icon"
+                  className="w-[335px] sm:w-[285px] h-[350px] sm:h-[438px]"
+                />
+                <div className="absolute top-[75%] left-[50%] translate-x-[-50%] w-[290px] flex flex-col text-center items-center">
+                  <h1 className="font-inter font-[700] text-[18px] leading-[28px] text-white">{card.title}</h1>
+                  <p className="font-inter font-[400] text-[14px] lg:text-[16px] leading-[22px] text-white">{card.description}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
           {/* Button */}
           <div className="mt-[30px] sm:mt-[53px] w-full [@media(min-width:390px)]:max-w-[230px] h-[54px] bg-white p-[3px]">
