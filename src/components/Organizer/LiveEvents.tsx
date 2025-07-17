@@ -66,15 +66,30 @@ const LiveEventCard = ({ cardImage }: { cardImage: string }) => {
         {/* Button */}
         <div className="absolute left-[6%] bottom-[-30px] w-full max-w-[295px] lg:max-w-[336px] h-[38px] lg:h-[60px] bg-white p-[3px]">
           <div className="border border-black flex items-center justify-center w-full h-full cursor-pointer text-black font-inter text-[18px] font-[600] uppercase">
-            <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px]">
+            <div className="flex items-center gap-[10px] py-[13px] lg:px-[28px] lg:py-[24px] group">
               <img
                 src="/logo/arrow-right.svg"
                 alt=""
-                className="w-[25px] h-[12px]"
+                className="
+                  w-[25px] h-[12px]
+                  transition-all duration-500
+                  group-hover:order-2
+                  group-hover:translate-x-[0px] group-hover:ml-0
+                  order-1
+                "
+                style={{ willChange: 'transform' }}
               />
               <button
-                className="font-inter leading-[16px] lg:leading-[26px]  text-[12px] lg:text-[16px] font-[800] uppercase bg-transparent border-none outline-none cursor-pointer"
+                className="
+                  font-inter leading-[16px] lg:leading-[26px] text-[12px] lg:text-[16px] font-[800] uppercase
+                  bg-transparent border-none outline-none cursor-pointer
+                  transition-all duration-500
+                  group-hover:order-1
+                  group-hover:-translate-x-[5px]
+                  order-2
+                "
                 onClick={() => {}}
+                style={{ willChange: 'transform' }}
               >
                 BUY TICKETS
               </button>
