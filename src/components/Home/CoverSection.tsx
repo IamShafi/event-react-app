@@ -129,7 +129,7 @@ const HeroInfoOverlay = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="relative w-full max-w-[335px] lg:max-w-[1200px] flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[60px]">
+    <div className="relative w-full max-w-[335px] lg:max-w-[1200px] flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[60px] md:mb-[90px]">
       {/* Heading */}
       <div className="flex flex-col mb-[20px]">
         <div className="flex items-center gap-[4px]">
@@ -220,7 +220,7 @@ const CoverSection = () => {
           //   }}
         ></div>
         {/* Content */}
-        <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-0 md:mb-15 z-20">
+        <div className="w-full flex items-center justify-center mt-[476px] md:mt-[716px] mb-0 z-20">
           <HeroInfoOverlay />
         </div>
         {/* Navigations */}
