@@ -22,16 +22,10 @@ const Header = () => {
     <div
       className="fixed top-0 z-50 sm:backdrop-blur-[44px] w-full h-[71px] md:h-[95px] mx-auto flex items-center justify-center"
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#0000001A",
         borderBottom: "1px solid",
-        borderImage: `linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.5) 20%,
-            rgba(255, 255, 255, 0.5) 50%,
-            rgba(255, 255, 255, 0.5) 80%,
-            rgba(255, 255, 255, 0) 100%
-          )`,
+        borderImage: `linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%)
+`,
         borderImageSlice: 1,
       }}
     >
